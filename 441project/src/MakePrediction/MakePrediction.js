@@ -1,7 +1,5 @@
 import React, {Component} from "react";
-import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup'
-import ToggleButton from 'react-bootstrap/ToggleButton'
-import 'bootstrap/dist/css/bootstrap.css';
+import Matches from "../components/Matches";
 
 export class MakePrediction extends Component {
   state= {
@@ -46,21 +44,12 @@ export class MakePrediction extends Component {
       })
     });
   };
+  
   render() {
     return (
       <div>
         <h1>Make a Prediction</h1>
-        <div>
-          <ToggleButtonGroup type="radio" defaultValue='none' name='options'>
-            <ToggleButton value={0} onChange={this.recordPrediction.bind(this, this.state.matches[0].id, 0)}>{this.state.matches[0].teams[0].name}</ToggleButton>
-            <ToggleButton value={1} onChange={this.recordPrediction.bind(this, this.state.matches[0].id, 1)}>{this.state.matches[0].teams[1].name}</ToggleButton>  
-          </ToggleButtonGroup>
-        </div>
-        <br/>
-        <div>
-          <button>{this.state.matches[1].teams[0].name}</button>
-          <button>{this.state.matches[1].teams[1].name}</button>
-        </div>
+        <Matches matches={this.state.matches} recordPrediction={this.recordPrediction}/>
       </div>
 
 
