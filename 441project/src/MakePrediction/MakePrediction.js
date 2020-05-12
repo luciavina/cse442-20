@@ -1,6 +1,8 @@
 import React, {Component} from "react";
 import Matches from "../components/Matches";
 import Button from 'react-bootstrap/Button'
+import history from "../history";
+import {Link} from 'react-router-dom';
 
 export class MakePrediction extends Component {
   state= {
@@ -159,7 +161,9 @@ export class MakePrediction extends Component {
         <br/>
         <h3>Tap to select winning teams</h3>
         <Matches matches={this.state.matches} recordPrediction={this.recordPrediction}/>
-        <Button>next</Button>
+        <Link to='/MakePrediction/Confirm'>
+          <Button>Next</Button>
+        </Link>
       </div>
 
 

@@ -5,6 +5,7 @@ import MakePrediction from "./MakePrediction/MakePrediction";
 import SendCheer from "./SendCheer/SendCheer";
 import Results from "./Results/Results";
 import Home from "./Home/Home";
+import ConfirmPrediction from './MakePrediction/ConfirmPrediction';
 import history from './history';
 
 export default class Routes extends Component {
@@ -12,7 +13,8 @@ export default class Routes extends Component {
     return (
         <BrowserRouter history={history}>
             <Route path="/" exact component={Home} />
-            <Route path="/MakePrediction" component={MakePrediction} />
+            <Route path="/MakePrediction" exact component={MakePrediction} />
+            <Route path="/MakePrediction/Confirm" component={ConfirmPrediction} />
             <Route path="/SendCheer" component={SendCheer} />
             <Route path="/Results" component={Results} />
         </BrowserRouter>
