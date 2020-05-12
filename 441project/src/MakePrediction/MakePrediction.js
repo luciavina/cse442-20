@@ -1,7 +1,6 @@
 import React, {Component} from "react";
 import Matches from "../components/Matches";
 import Button from 'react-bootstrap/Button'
-import history from "../history";
 import {Link} from 'react-router-dom';
 
 export class MakePrediction extends Component {
@@ -137,19 +136,23 @@ export class MakePrediction extends Component {
           }
         ]
       }
-    ]
+    ],
+    isConfirmation: false
   }
   
+  //set state to match users selection by switching boolean values of 'selected'
+  //fot the teams with this match id 
   recordPrediction = (id, choice) => {
     this.setState({
       matches: this.state.matches.map(matches => {
         if(matches.id===id){
-          matches.teams[choice].selected = true;
-          matches.teams[choice%1].selected = false;
+          matches.teams[(choice===1) ? 1 : 0 ].selected = true; // if/else '?' = if and ':' = else
+          matches.teams[(choice===1)  ? 0 : 1].selected = false;
         }
         return matches;
       })
     });
+    console.log(this.state.matches);
   };
   
   render() {
@@ -160,13 +163,16 @@ export class MakePrediction extends Component {
         <h2> Week 4: most push-ups in 1 minute</h2>
         <br/>
         <h3>Tap to select winning teams</h3>
-        <Matches matches={this.state.matches} recordPrediction={this.recordPrediction}/>
-        <Link to='/MakePrediction/Confirm'>
+        <Matches matches={this.state.matches} conf={this.state.isConfirmation} recordPrediction={this.recordPrediction}/>
+        <Link to={{
+          pathname: '/MakePrediction/Confirm',
+          state: {
+            matches: this.state.matches
+          }
+        }}>
           <Button>Next</Button>
         </Link>
       </div>
-
-
     );
   }
 }

@@ -6,14 +6,19 @@ class Matches extends Component {
 
     render() {
         return this.props.matches.map((match) => (
-            <MatchItem key={match.id} match={match} recordPrediction={this.props.recordPrediction}/>
+            <MatchItem 
+                key={match.id} 
+                match={match} 
+                conf={this.props.conf} 
+                recordPrediction={this.props.recordPrediction}
+            />
             ));
     }
 }
 
 Matches.propTypes = {
     matches: PropTypes.array.isRequired,
-    recordPrediction: PropTypes.func.isRequired
+    //recordPrediction: PropTypes.func.isRequired
 }
 
 export default Matches;

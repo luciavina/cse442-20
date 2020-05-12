@@ -7,15 +7,29 @@ import PropTypes from "prop-types";
 class MatchItem extends Component {
 
     render() {
-        console.log(this.props.match.id);
+        const {id, teams} = this.props.match;
+        const conf = this.props.conf; //boolean true if at Confrim page. 
+        //let defVal = 'none';
+        if (conf) {
+            //defVal = teams[0].selected ? 0 : 1;
+        }
+
+
         return (
             <div>
-                <ToggleButtonGroup type='radio' defaultValue='none' name='options'> 
-                    <ToggleButton value={0} onChange={this.props.recordPrediction.bind(this, this.props.match.id, 0)}> {this.props.match.teams[0].name} </ToggleButton>
-                    <ToggleButton value={1} onChange={this.props.recordPrediction.bind(this, this.props.match.id, 1)} > {this.props.match.teams[1].name} </ToggleButton>
+                <ToggleButtonGroup type='radio' name='options' defaultValue='none'> 
+                    <ToggleButton
+                        value={0} 
+                        onChange={this.props.recordPrediction.bind(this, id, 0)}> 
+                        {teams[0].name} 
+                    </ToggleButton>
+                    <ToggleButton 
+                        value={1} 
+                        onChange={this.props.recordPrediction.bind(this, id, 1)}> 
+                        {teams[1].name} 
+                    </ToggleButton>
                 </ToggleButtonGroup>
             </div>
-                
         );
     }
 }
@@ -26,11 +40,3 @@ MatchItem.propTypes = {
     match: PropTypes.object.isRequired,
     //recordPrediction: PropTypes.func.isRequired
 }
-
-
-/*            <div>
-                <ToggleButtonGroup type="radio" defaultValue='none' name='options'>
-                    <ToggleButton value={0} onChange={this.recordPrediction.bind(this, this.state.matches[0].id, 0)}>{this.state.matches[0].teams[0].name}</ToggleButton>
-                   <ToggleButton value={1} onChange={this.recordPrediction.bind(this, this.state.matches[0].id, 1)}>{this.state.matches[0].teams[1].name}</ToggleButton>
-                </ToggleButtonGroup>
-            </div>*/
