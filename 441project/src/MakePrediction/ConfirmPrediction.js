@@ -177,7 +177,7 @@ export default class ConfirmPrediction extends Component {
                             matches: this.state.matches
                         }
                     }}>
-                        <Button>Email Receipt</Button>
+                        <Button>Confirm and Email Receipt</Button>
                     </Link>
                 </div>
             </div>
