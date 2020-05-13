@@ -163,7 +163,8 @@ export default class ConfirmPrediction extends Component {
                     <Link to={{
                     pathname: '/MakePrediction',
                     state: {
-                        matches: this.state.matches
+                        matches: this.state.matches,
+                        netId: this.state.netId
                     }
                 }}>
                     <br/>

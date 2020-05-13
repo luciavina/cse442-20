@@ -174,7 +174,7 @@ export class MakePrediction extends Component {
         <Matches matches={this.state.matches} conf={this.state.isConfirmation} recordPrediction={this.recordPrediction}/>
         <div className="controlbutton">
           <Link to={{
-            pathname: '/',
+            pathname: '/Login',
           }}>
             <br/>
             <Button>Back</Button>
