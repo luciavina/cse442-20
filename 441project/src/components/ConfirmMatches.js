@@ -18,7 +18,6 @@ class ConfirmMatches extends Component {
 
 ConfirmMatches.propTypes = {
   matches: PropTypes.array.isRequired,
-  //recordPrediction: PropTypes.func.isRequired
 }
 
 export default ConfirmMatches;

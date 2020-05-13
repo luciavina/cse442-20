@@ -4,6 +4,7 @@ import { BrowserRouter, Route } from "react-router-dom";
 import MakePrediction from "./MakePrediction/MakePrediction";
 import SendCheer from "./SendCheer/SendCheer";
 import Results from "./Results/Results";
+import WeekResults from "./Results/WeekResults";
 import Home from "./Home/Home";
 import ConfirmPrediction from './MakePrediction/ConfirmPrediction';
 import EmailSent from "./MakePrediction/EmailSent";
@@ -19,8 +20,9 @@ export default class Routes extends Component {
             <Route path="/MakePrediction" exact component={MakePrediction} />
             <Route path="/MakePrediction/Confirm" exact component={ConfirmPrediction} />
             <Route path="/MakePrediction/Confirm/Sent" exact component={EmailSent}/>
-            <Route path="/SendCheer" component={SendCheer} />
-            <Route path="/Results" component={Results} />
+            <Route path="/SendCheer" exact component={SendCheer} />
+            <Route path="/Results" exact component={Results} />
+            <Route path="/Results/WeekResults" exact component = {WeekResults}/>
         </BrowserRouter>
     )
   }
