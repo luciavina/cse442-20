@@ -1,5 +1,5 @@
 import React, {Component} from 'react';
-import Matches from "../components/Matches";
+import ConfirmMatches from "../components/ConfirmMatches";
 
 
 export default class ConfirmPrediction extends Component {
@@ -153,7 +153,7 @@ export default class ConfirmPrediction extends Component {
         return (
             <div>
                 <h1> Confirm </h1>
-                <Matches matches={this.state.matches} conf={this.state.isConfirmation} recordPrediction={this.recordPrediction}/>
+                <ConfirmMatches matches={this.state.matches}/>
             </div>
         );
     }

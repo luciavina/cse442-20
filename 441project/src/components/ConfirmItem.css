@@ -1,0 +1,23 @@
+.select p {
+     padding: 10px;
+     font-size: 16px;
+     margin: 4px;
+     background-color: #003399;
+     color: #fff;
+     border: 2px solid #003399;
+     width: 150px;
+     border-radius: 5px;
+ }
+.unselect p {
+    padding: 10px;
+    font-size: 16px;
+    margin: 4px;
+    background-color: #0066FF;
+    color: #fff;
+    border: 2px solid #0066FF;
+    width: 150px;
+    border-radius: 5px;
+}
+.border {
+    border: 2px solid black;
+}

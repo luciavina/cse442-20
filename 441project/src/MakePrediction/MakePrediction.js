@@ -170,6 +170,7 @@ export class MakePrediction extends Component {
             matches: this.state.matches
           }
         }}>
+          <br/>
           <Button>Next</Button>
         </Link>
       </div>
