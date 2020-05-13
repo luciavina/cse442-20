@@ -1,23 +1,25 @@
 .select p {
      padding: 10px;
      font-size: 16px;
-     margin: 4px;
-     background-color: #003399;
+     margin: 1.5px;
+     background-color: rebeccapurple;
      color: #fff;
-     border: 2px solid #003399;
-     width: 150px;
+     border: 2px solid rebeccapurple;
+     width: 170px;
      border-radius: 5px;
  }
 .unselect p {
     padding: 10px;
     font-size: 16px;
-    margin: 4px;
-    background-color: #0066FF;
+    margin: 1.5px;
+    background-color: slategray;
     color: #fff;
-    border: 2px solid #0066FF;
-    width: 150px;
+    border: 2px solid slategrey;
+    width: 170px;
     border-radius: 5px;
 }
-.border {
-    border: 2px solid black;
+.group {
+    border: 8px solid white;
+    display: flex;
+    justify-content: center;
 }

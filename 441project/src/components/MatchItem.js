@@ -3,6 +3,7 @@ import ToggleButtonGroup from 'react-bootstrap/ToggleButtonGroup'
 import ToggleButton from 'react-bootstrap/ToggleButton'
 import 'bootstrap/dist/css/bootstrap.css';
 import PropTypes from "prop-types";
+import "./MatchItem.css"
 
 class MatchItem extends Component {
 
@@ -17,17 +18,19 @@ class MatchItem extends Component {
 
         return (
             <div>
-                <ToggleButtonGroup type='radio' name='options' defaultValue='none'> 
+                <ToggleButtonGroup type='radio' name='options' defaultValue='none' id="group">
                     <ToggleButton
                         disabled={conf}
                         value={0} 
-                        onChange={this.props.recordPrediction.bind(this, id, 0)}> 
+                        onChange={this.props.recordPrediction.bind(this, id, 0)}
+                        className="predictbtn">
                         {teams[0].name} 
                     </ToggleButton>
                     <ToggleButton 
                         disabled={conf}
                         value={1} 
-                        onChange={this.props.recordPrediction.bind(this, id, 1)}> 
+                        onChange={this.props.recordPrediction.bind(this, id, 1)}
+                        className="predictbtn">
                         {teams[1].name} 
                     </ToggleButton>
                 </ToggleButtonGroup>

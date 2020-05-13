@@ -1,6 +1,8 @@
 import React, {Component} from 'react';
 import ConfirmMatches from "../components/ConfirmMatches";
-
+import {Link} from "react-router-dom";
+import Button from "react-bootstrap/Button";
+import "./Prediction.css"
 
 export default class ConfirmPrediction extends Component {
     state  = {
@@ -148,12 +150,36 @@ export default class ConfirmPrediction extends Component {
     recordPrediction = () => {
         console.log('dont wanna do it')
     }
-    
+
     render() {
         return (
             <div>
-                <h1> Confirm </h1>
+                <h1>Confirm Your Teams</h1>
+                <br/>
+                <h2> Week 4: most push-ups in 1 minute</h2>
+                <br/>
+                <h4>Selected Teams:</h4>
                 <ConfirmMatches matches={this.state.matches}/>
+                <br/>
+                <div className="controlbutton">
+                    <Link to={{
+                    pathname: '/MakePrediction',
+                    state: {
+                        matches: this.state.matches
+                    }
+                }}>
+                    <br/>
+                    <Button>Back</Button>
+                    </Link>
+                    <Link to={{
+                        pathname: '/',
+                        state: {
+                            matches: this.state.matches
+                        }
+                    }}>
+                        <Button>Email Receipt</Button>
+                    </Link>
+                </div>
             </div>
         );
     }

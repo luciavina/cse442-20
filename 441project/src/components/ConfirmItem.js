@@ -9,16 +9,14 @@ class ConfirmItem extends Component {
     //let defVal = 'none';
 
     return (
-      <div>
-        <div className="border">
+        <div className="group">
           <div className={teams[0].selected ? 'select' : 'unselect'}>
               <p>{teams[0].name}</p>
           </div>
-            <div className={teams[1].selected ? 'select' : 'unselect'}>
-                <p>{teams[1].name}</p>
-            </div>
+          <div className={teams[1].selected ? 'select' : 'unselect'}>
+              <p>{teams[1].name}</p>
+          </div>
         </div>
-      </div>
     );
   }
 }

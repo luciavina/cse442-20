@@ -1,0 +1,8 @@
+.controlbutton Button {
+    margin: 4px;
+    background-color: goldenrod;
+    border: goldenrod;
+}
+.controlbutton Button:hover {
+    background-color: palegoldenrod;
+}
