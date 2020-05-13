@@ -13,18 +13,10 @@ class ConfirmItem extends Component {
         <div className="border">
           <div className={teams[0].selected ? 'select' : 'unselect'}>
               <p>{teams[0].name}</p>
-              <p>{teams[0].selected}</p>
           </div>
-
-          if (teams[1].selected) {
-            <div className="select">
-              <p>{teams[1].name}</p>
+            <div className={teams[1].selected ? 'select' : 'unselect'}>
+                <p>{teams[1].name}</p>
             </div>
-          } else {
-            <div className="unselect">
-              <p>{teams[1].name}</p>
-            </div>
-          }
         </div>
       </div>
     );

@@ -19,11 +19,13 @@ class MatchItem extends Component {
             <div>
                 <ToggleButtonGroup type='radio' name='options' defaultValue='none'> 
                     <ToggleButton
+                        disabled={conf}
                         value={0} 
                         onChange={this.props.recordPrediction.bind(this, id, 0)}> 
                         {teams[0].name} 
                     </ToggleButton>
                     <ToggleButton 
+                        disabled={conf}
                         value={1} 
                         onChange={this.props.recordPrediction.bind(this, id, 1)}> 
                         {teams[1].name} 
