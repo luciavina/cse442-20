@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import Button from 'react-bootstrap/Button'
 import Weeks from "../components/Weeks";
 import {Link} from "react-router-dom";
+import "../MakePrediction/Prediction.css";
 
 export class Results extends Component {
   state = {

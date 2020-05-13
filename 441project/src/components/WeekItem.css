@@ -1,0 +1,10 @@
+.weekbtn Button {
+    background-color: lightslategrey;
+    text-align: left;
+    width: 450px;
+    padding: 10px;
+    font-size: 20px;
+}
+.weekbtn Button:hover {
+    background-color: goldenrod;
+}

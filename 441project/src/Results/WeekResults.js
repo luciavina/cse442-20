@@ -2,6 +2,7 @@ import React, {Component} from "react";
 import ConfirmMatches from "../components/ConfirmMatches";
 import Button from "react-bootstrap/Button";
 import {Link} from "react-router-dom";
+import "../MakePrediction/Prediction.css"
 
 export class WeekResults extends Component {
 
@@ -142,7 +143,7 @@ export class WeekResults extends Component {
 
   render() {
     return (
-        <div>
+        <div className="controlbutton">
           <h1>Results</h1>
           <ConfirmMatches matches={this.state.matches}/>
           <Link to={{
