@@ -6,6 +6,7 @@ import "./Prediction.css"
 
 export default class ConfirmPrediction extends Component {
     state  = {
+        netId: '',
         matches: [
             {
                 id: 0,
@@ -141,14 +142,11 @@ export default class ConfirmPrediction extends Component {
         isConfirmation: true
     }
     componentDidMount() {
-        const { matches } = this.props.location.state;
+        const { matches, netId } = this.props.location.state;
         this.setState({
-            matches: matches
+            matches: matches,
+            netId: netId
         });
-    }
-
-    recordPrediction = () => {
-        console.log('dont wanna do it')
     }
 
     render() {
@@ -172,9 +170,9 @@ export default class ConfirmPrediction extends Component {
                     <Button>Back</Button>
                     </Link>
                     <Link to={{
-                        pathname: '/',
+                        pathname: '/MakePrediction/Confirm/Sent',
                         state: {
-                            matches: this.state.matches
+                            netId: this.state.netId
                         }
                     }}>
                         <Button>Confirm and Email Receipt</Button>

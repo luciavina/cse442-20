@@ -1,0 +1,15 @@
+.header input {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid lightgray;
+    border-radius: 5px;
+    width: 300px;
+}
+.header Button {
+    margin: 4px;
+    background-color: goldenrod;
+    border: goldenrod;
+}
+.header Button:hover {
+    background-color: palegoldenrod;
+}

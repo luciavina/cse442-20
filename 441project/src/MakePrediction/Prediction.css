@@ -1,5 +1,6 @@
 .controlbutton Button {
     margin: 4px;
+    font-size: 24px;
     background-color: goldenrod;
     border: goldenrod;
 }

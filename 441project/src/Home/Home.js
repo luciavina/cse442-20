@@ -9,7 +9,7 @@ export default class Home extends Component {
           <div className="container">
             <h1>Dawg Pack Showdown</h1>
             <form>
-              <button onClick={() => history.push('/MakePrediction')}>Make a Prediction</button>
+              <button onClick={() => history.push('/Login')}>Make a Prediction</button>
               <br/>
               <button onClick={() => history.push('/SendCheer')}>Send a Cheer</button>
               <br/>

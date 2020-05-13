@@ -1,11 +1,10 @@
-import React, {Component} from "react";
-import Matches from "../components/Matches";
-import Button from 'react-bootstrap/Button'
-import {Link} from 'react-router-dom';
+import React, {Component} from 'react';
+import {Link} from "react-router-dom";
+import Button from "react-bootstrap/Button";
 import "./Prediction.css"
 
-export class MakePrediction extends Component {
-  state= {
+export default class EmailSent extends Component {
+  state  = {
     netId: '',
     matches: [
       {
@@ -29,7 +28,7 @@ export class MakePrediction extends Component {
             selected: false
           },
           {
-            name: 'M. Football', 
+            name: 'M. Football',
             selected: false
           }
         ]
@@ -139,59 +138,31 @@ export class MakePrediction extends Component {
         ]
       }
     ],
-    isConfirmation: false
+    isConfirmation: true
   }
   componentDidMount() {
-    const { netId } = this.props.location.state;
+    const { matches, netId } = this.props.location.state;
     this.setState({
+      matches: matches,
       netId: netId
     });
   }
-  //set state to match users selection by switching boolean values of 'selected'
-  //fot the teams with this match id 
-  recordPrediction = (id, choice) => {
-    this.setState({
-      matches: this.state.matches.map(matches => {
-        if(matches.id===id){
-          matches.teams[(choice===1) ? 1 : 0 ].selected = true; // if/else '?' = if and ':' = else
-          matches.teams[(choice===1)  ? 0 : 1].selected = false;
-        }
-        return matches;
-      })
-    });
-    console.log(this.state.matches);
-    console.log(this.state.netId);
-  };
-  
+
   render() {
     return (
-      <div>
-        <h1>Make a Prediction</h1>
+      <div className="controlbutton">
+        <h1>Email receipt has been sent to:</h1>
         <br/>
-        <h2> Week 4: most push-ups in 1 minute</h2>
+        <h2> {this.state.netId}@uw.edu</h2>
         <br/>
-        <h4>Tap to select winning teams</h4>
-        <Matches matches={this.state.matches} conf={this.state.isConfirmation} recordPrediction={this.recordPrediction}/>
-        <div className="controlbutton">
+        <img src="https://i.pinimg.com/originals/b5/0a/a2/b50aa2af9e269b0c520d383cad0e3aae.gif" alt="Go Huskies!" height="400"/>
           <Link to={{
             pathname: '/',
           }}>
-            <br/>
-            <Button>Back</Button>
-          </Link>
-          <Link to={{
-            pathname: '/MakePrediction/Confirm',
-            state: {
-              matches: this.state.matches,
-              netId: this.state.netId
-            }
-          }}>
-            <Button>Next</Button>
+            <br/><br/>
+            <Button>Done</Button>
           </Link>
         </div>
-      </div>
     );
   }
 }
-
-export default MakePrediction;
