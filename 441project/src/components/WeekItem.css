@@ -4,7 +4,22 @@
     width: 450px;
     padding: 10px;
     font-size: 20px;
+    margin: 8.5px;
 }
 .weekbtn Button:hover {
     background-color: goldenrod;
+}
+.inactive Button {
+    background-color: lightgray;
+    text-align: left;
+    width: 450px;
+    padding: 10px;
+    font-size: 20px;
+    margin: 8.5px;
+}
+.inactive Button:hover {
+    background-color: lightgray;
+}
+.inactive Button:hover {
+    background-color: lightgoldenrod;
 }

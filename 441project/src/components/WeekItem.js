@@ -3,6 +3,7 @@ import PropTypes from "prop-types";
 import "./WeekItem.css"
 import Button from "react-bootstrap/Button";
 import {Link} from "react-router-dom";
+import "./WeekItem.css"
 
 class WeekItem extends Component {
 
@@ -11,10 +12,14 @@ class WeekItem extends Component {
     return (
         <div>
           {isComplete
-                ? <Link to={{pathname: '/Results/WeekResults'}}>
-                  <Button>Week {this.props.week.id}: {this.props.week.challenge}</Button>
-                  </Link>
-                : <Button>Week {this.props.week.id}: {this.props.week.challenge}</Button>
+                ? <div className="weekbtn">
+                    <Link to={{pathname: '/Results/WeekResults'}}>
+                    <Button>Week {this.props.week.id}: {this.props.week.challenge}</Button>
+                     </Link>
+                </div>
+                : <div className="inactive">
+                    <Button>Week {this.props.week.id}: {this.props.week.challenge}</Button>
+                 </div>
           }
         </div>
     );
