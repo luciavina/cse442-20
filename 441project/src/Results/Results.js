@@ -25,37 +25,37 @@ export class Results extends Component {
       {
         id: 4,
         challenge: '10 Minute Abs Challenge',
-        complete: true
+        complete: false
       },
       {
         id: 5,
         challenge: 'Deadlift Challege',
-        complete: true
+        complete: false
       },
       {
         id: 6,
         challenge: 'Longest Throw Challenge',
-        complete: true
+        complete: false
       },
       {
         id: 7,
         challenge: 'Trick Shots Challenge',
-        complete: true
+        complete: false
       },
       {
         id: 8,
         challenge: 'Soccer Juggling Challenge',
-        complete: true
+        complete: false
       },
       {
         id: 9,
         challenge: 'Swim Challenge',
-        complete: true
+        complete: false
       },
       {
         id: 10,
         challenge: 'Burpees Challenge',
-        complete: true
+        complete: false
       },
     ]
   }

@@ -4,6 +4,8 @@ import Button from "react-bootstrap/Button";
 import {Link} from "react-router-dom";
 import "../MakePrediction/Prediction.css"
 
+
+// TODO: Make it so the challege for each week is shown
 export class WeekResults extends Component {
 
   state = {
