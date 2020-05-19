@@ -13,7 +13,7 @@ export default class Home extends Component {
               <br/>
               <button onClick={() => history.push('/SendCheer')}>Send a Cheer</button>
               <br/>
-              <button onClick={() => history.push('/Results')}>Results</button>
+              <button onClick={() => history.push('/Results')}>View Results</button>
             </form>
           </div>
     );

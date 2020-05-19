@@ -26,6 +26,7 @@ class MatchItem extends Component {
                         className="predictbtn">
                         {teams[0].name} 
                     </ToggleButton>
+                    vs.
                     <ToggleButton 
                         disabled={conf}
                         value={1} 

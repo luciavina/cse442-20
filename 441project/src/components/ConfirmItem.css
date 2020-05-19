@@ -19,7 +19,7 @@
     border-radius: 5px;
 }
 .group {
-    border: 8px solid white;
+    border: 15px solid white;
     display: flex;
     justify-content: center;
 }

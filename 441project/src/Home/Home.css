@@ -1,12 +1,14 @@
 .container button {
     padding: 10px;
+    padding-right: 30px;
     font-size: 32px;
     margin: 10px;
     background-color: lightslategrey;
     color: #fff;
     border: 2px solid lightslategrey;
-    width: 700px;
+    width: 500px;
     border-radius: 10px;
+    text-align: right;
 }
 .container button:hover {
     background-color: #007bff;

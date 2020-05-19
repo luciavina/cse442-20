@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Webcam from "react-webcam";
 import Button from "react-bootstrap/Button";
 import {Link} from "react-router-dom";
+import "../MakePrediction/Prediction.css";
 
 class Camera extends Component {
 
@@ -80,26 +81,26 @@ class Camera extends Component {
     };
 
     return (
-        <div>
+        <div className="controlbutton">
           {this.state.imageData ?
-              <div>
+              <div className="camerabutton">
                 <p><img src={this.state.imageData} alt=""/></p>
-                <span><button onClick={this.onClickRetake}>Retake</button></span>
-                <span><button onClick={this.onClickSave}>Save</button></span>
+                <span><Button onClick={this.onClickRetake}>Retake</Button></span>
+                <span><Button onClick={this.onClickSave}>Save</Button></span>
                 {this.state.saveImage ? this.saveForm() : null}
               </div>
               :
           <div>
             <Webcam
                 audio={false}
-                height={1000}
+                height={500}
                 ref={this.setRef}
                 screenshotFormat="image/jpeg"
                 width={1000}
                 videoConstraints={videoConstraints}
             />
-            <div>
-              <button onClick={this.capture}>Capture Photo</button>
+            <div className="camerabutton">
+              <Button onClick={this.capture}>Capture Photo</Button>
             </div>
           </div>}
 

@@ -13,6 +13,7 @@ class ConfirmItem extends Component {
           <div className={teams[0].selected ? 'select' : 'unselect'}>
               <p>{teams[0].name}</p>
           </div>
+          vs.
           <div className={teams[1].selected ? 'select' : 'unselect'}>
               <p>{teams[1].name}</p>
           </div>
