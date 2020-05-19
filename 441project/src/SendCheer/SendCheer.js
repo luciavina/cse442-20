@@ -1,6 +1,9 @@
 import React, {Component} from "react";
+import Camera from "./Camera";
+import Button from "react-bootstrap/Button";
+import {Link} from "react-router-dom";
 
-export class SendCheer extends Component {
+class SendCheer extends Component {
   render() {
     return (
         <div>
@@ -12,6 +15,18 @@ export class SendCheer extends Component {
           <br/>
           <h2> Your cheer will be sent to their team dashboard and you can choose to have your cheer displayed here on the Dawgpack Showdown display.</h2>
           <br/>
+          <Link to={{
+            pathname: '/SendCheer/Camera'
+          }}>
+            <br/>
+            <Button>Get Started</Button>
+          </Link>
+          <Link to={{
+            pathname: '/'
+          }}>
+            <br/>
+            <Button>Back</Button>
+          </Link>
         </div>
 
 
