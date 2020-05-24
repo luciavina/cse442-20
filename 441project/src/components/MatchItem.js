@@ -44,5 +44,4 @@ export default MatchItem;
 
 MatchItem.propTypes = {
     match: PropTypes.object.isRequired,
-    //recordPrediction: PropTypes.func.isRequired
 }

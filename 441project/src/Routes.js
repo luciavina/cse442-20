@@ -20,7 +20,7 @@ export default class Routes extends Component {
             <Route path="/Login"exact component={Login} />
             <Route path="/MakePrediction" exact component={MakePrediction} />
             <Route path="/MakePrediction/Confirm" exact component={ConfirmPrediction} />
-            <Route path="/MakePrediction/Confirm/Sent" exact component={EmailSent}/>
+            <Route path="/MakePrediction/Sent" exact component={EmailSent}/>
             <Route path="/SendCheer" exact component={SendCheer} />
             <Route path="/SendCheer/Camera" exact component={Camera} />
             <Route path="/Results" exact component={Results} />

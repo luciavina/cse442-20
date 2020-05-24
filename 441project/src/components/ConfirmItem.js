@@ -25,6 +25,5 @@ class ConfirmItem extends Component {
 export default ConfirmItem;
 
 ConfirmItem.propTypes = {
-  match: PropTypes.object.isRequired,
-  //recordPrediction: PropTypes.func.isRequired
+  match: PropTypes.object.isRequired
 }

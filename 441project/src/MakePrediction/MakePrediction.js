@@ -162,6 +162,19 @@ export class MakePrediction extends Component {
     console.log(this.state.matches);
     console.log(this.state.netId);
   };
+
+  // Sends email confirmation to the email corresponding with the current UW netID
+  sendEmail(e) {
+    const email = this.state.netId + "@uw.edu";
+    console.log({email});
+    window.emailjs.send('dawg_pack_showdown', 'test_mailing',
+        {user_email : email}, 'user_vqodUUOyI7ku3p5VP4m8a')
+        .then((result) => {
+          console.log(result.text);
+        }, (error) => {
+          console.log(error.text);
+        });
+  }
   
   render() {
     return (
@@ -180,13 +193,12 @@ export class MakePrediction extends Component {
             <Button>Back</Button>
           </Link>
           <Link to={{
-            pathname: '/MakePrediction/Confirm',
+            pathname: '/MakePrediction/Sent',
             state: {
-              matches: this.state.matches,
               netId: this.state.netId
             }
           }}>
-            <Button>Next</Button>
+            <Button onClick = {() => {this.sendEmail()}}>Confirm and Email Receipt</Button>
           </Link>
         </div>
       </div>

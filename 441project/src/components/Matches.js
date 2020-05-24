@@ -18,7 +18,6 @@ class Matches extends Component {
 
 Matches.propTypes = {
     matches: PropTypes.array.isRequired,
-    //recordPrediction: PropTypes.func.isRequired
 }
 
 export default Matches;
