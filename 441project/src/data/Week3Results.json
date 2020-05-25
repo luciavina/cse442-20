@@ -1,0 +1,134 @@
+{
+  "matches": [
+    {
+      "id": 0,
+      "teams": [
+        {
+          "name": "W. Beach Volleyball",
+          "selected": true
+        },
+        {
+          "name": "M. Cross Country",
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": 1,
+      "teams": [
+        {
+          "name": "M. Golf",
+          "selected": true
+        },
+        {
+          "name": "M. Football",
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "teams": [
+        {
+          "name": "M. Tennis",
+          "selected": true
+        },
+        {
+          "name": "W. Track & Field",
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "teams": [
+        {
+          "name": "M. Soccer",
+          "selected": false
+        },
+        {
+          "name": "M. Basketball",
+          "selected": true
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "teams": [
+        {
+          "name": "M. Baseball",
+          "selected": false
+        },
+        {
+          "name": "W. Basketball",
+          "selected": true
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "teams": [
+        {
+          "name": "M. Rowing",
+          "selected": true
+        },
+        {
+          "name": "W. Cross Country",
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "teams": [
+        {
+          "name": "W. Golf",
+          "selected": false
+        },
+        {
+          "name": "M. Track & Field",
+          "selected": true
+        }
+      ]
+    },
+    {
+      "id": 7,
+      "teams": [
+        {
+          "name": "W. Volleyball",
+          "selected": true
+        },
+        {
+          "name": "W. Soccer",
+          "selected": false
+        }
+      ]
+    },
+    {
+      "id": 8,
+      "teams": [
+        {
+          "name": "W. Softball",
+          "selected": false
+        },
+        {
+          "name": "W. Rowing",
+          "selected": true
+        }
+      ]
+    },
+    {
+      "id": 9,
+      "teams": [
+        {
+          "name": "W. Tennis",
+          "selected": false
+        },
+        {
+          "name": "W. Gymnastics",
+          "selected": true
+        }
+      ]
+    }
+  ]
+}

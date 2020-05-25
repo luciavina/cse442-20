@@ -3,11 +3,9 @@ import 'bootstrap/dist/css/bootstrap.css';
 import PropTypes from "prop-types";
 import "./ConfirmItem.css"
 
-class ConfirmItem extends Component {
+export default class ConfirmItem extends Component {
   render() {
     const {teams} = this.props.match;
-    //let defVal = 'none';
-
     return (
         <div className="group">
           <div className={teams[0].selected ? 'select' : 'unselect'}>
@@ -21,8 +19,6 @@ class ConfirmItem extends Component {
     );
   }
 }
-
-export default ConfirmItem;
 
 ConfirmItem.propTypes = {
   match: PropTypes.object.isRequired

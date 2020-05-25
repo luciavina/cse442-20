@@ -1,0 +1,54 @@
+{
+  "weeks": [
+    {
+      "id": 1,
+      "challenge": "Dance-Off Challenge",
+      "complete": true
+    },
+    {
+      "id": 2,
+      "challenge": "100m Sprint Challenge",
+      "complete": true
+    },
+    {
+      "id": 3,
+      "challenge": "Max Push-Ups in 1 Minute Challenge",
+      "complete": true
+    },
+    {
+      "id": 4,
+      "challenge": "10 Minute Abs Challenge",
+      "complete": false
+    },
+    {
+      "id": 5,
+      "challenge": "Deadlift Challenge",
+      "complete": false
+    },
+    {
+      "id": 6,
+      "challenge": "Trick Shot Challenge",
+      "complete": false
+    },
+    {
+      "id": 7,
+      "challenge": "Longest run challenge",
+      "complete": false
+    },
+    {
+      "id": 8,
+      "challenge": "Soccer Juggling Challenge",
+      "complete": false
+    },
+    {
+      "id": 9,
+      "challenge": "Swim Challenge",
+      "complete": false
+    },
+    {
+      "id":10,
+      "challenge": "Burpee Challenge",
+      "complete": false
+    }
+  ]
+}
