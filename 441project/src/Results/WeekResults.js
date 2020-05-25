@@ -2,152 +2,36 @@ import React, {Component} from "react";
 import ConfirmMatches from "../components/ConfirmMatches";
 import Button from "react-bootstrap/Button";
 import {Link} from "react-router-dom";
-import "../MakePrediction/Prediction.css"
+import "../MakePrediction/Prediction.css";
+import week1data from "../data/Week1Results.json";
+import week2data from "../data/Week2Results.json";
+import week3data from "../data/Week2Results.json";
 
-
-// TODO: Make it so the challege for each week is shown
-export class WeekResults extends Component {
+export default class WeekResults extends Component {
+  constructor(props) {
+    super(props);
+    this.state.week1 = week1data.matches;
+    this.state.week2 = week2data.matches;
+    this.state.week3 = week3data.matches;
+  }
 
   state = {
-    matches: [
-      {
-        id: 0,
-        teams: [
-          {
-            name: 'M. Baseball',
-            selected: true
-          },
-          {
-            name: 'M. Basketball',
-            selected: false
-          }
-        ]
-      },
-      {
-        id:1,
-        teams: [
-          {
-            name: 'M. Cross Country',
-            selected: true
-          },
-          {
-            name: 'M. Football',
-            selected: false
-          }
-        ]
-      },
-      {
-        id:2,
-        teams: [
-          {
-            name: 'M. Golf',
-            selected: true
-          },
-          {
-            name: 'M. Rowing',
-            selected: false
-          }
-        ]
-      },
-      {
-        id:3,
-        teams: [
-          {
-            name: 'M. Soccer',
-            selected: false
-          },
-          {
-            name: 'M. Tennis',
-            selected: true
-          }
-        ]
-      },
-      {
-        id:4,
-        teams: [
-          {
-            name: 'M. Track & Field',
-            selected: false
-          },
-          {
-            name: 'W. Basketball',
-            selected: true
-          }
-        ]
-      },
-      {
-        id:5,
-        teams: [
-          {
-            name: 'W. Beach Volleyball',
-            selected: false
-          },
-          {
-            name: 'W. Cross Country',
-            selected: true
-          }
-        ]
-      },
-      {
-        id:6,
-        teams: [
-          {
-            name: 'W. Golf',
-            selected: false
-          },
-          {
-            name: 'W. Gymnastics',
-            selected: true
-          }
-        ]
-      },
-      {
-        id:7,
-        teams: [
-          {
-            name: 'W. Rowing',
-            selected: false
-          },
-          {
-            name: 'W. Soccer',
-            selected: true
-          }
-        ]
-      },
-      {
-        id:8,
-        teams: [
-          {
-            name: 'W. Softball',
-            selected: false
-          },
-          {
-            name: 'W. Tennis',
-            selected: true
-          }
-        ]
-      },
-      {
-        id:9,
-        teams: [
-          {
-            name: 'W. Track & Field',
-            selected: false
-          },
-          {
-            name: 'W. Volleyball',
-            selected: true
-          }
-        ]
-      }
-    ],
+    week1: [],
+    week2: [],
+    week3: []
   }
 
   render() {
+    const url = window.location.href;
     return (
         <div className="controlbutton">
           <h1>Results</h1>
-          <ConfirmMatches matches={this.state.matches}/>
+          {url === "http://localhost:3000/Results/WeekOneResults"
+          ? <ConfirmMatches matches={this.state.week1}/>
+          : url === "http://localhost:3000/Results/WeekTwoResults"
+          ? <ConfirmMatches matches={this.state.week2}/>
+          : <ConfirmMatches matches={this.state.week3}/>}
+
           <Link to={{
             pathname: '/Results'
           }}>
@@ -159,5 +43,3 @@ export class WeekResults extends Component {
     );
   }
 }
-
-export default WeekResults;
