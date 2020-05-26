@@ -9,7 +9,7 @@
         },
         {
           "name": "M. Cross Country",
-          "selected": false
+          "selected": true
         }
       ]
     },
@@ -22,7 +22,7 @@
         },
         {
           "name": "M. Football",
-          "selected": false
+          "selected": true
         }
       ]
     },
@@ -35,7 +35,7 @@
         },
         {
           "name": "M. Rowing",
-          "selected": false
+          "selected": true
         }
       ]
     },
@@ -44,7 +44,7 @@
       "teams": [
         {
           "name": "M. Soccer",
-          "selected": false
+          "selected": true
         },
         {
           "name": "M. Golf",
@@ -61,7 +61,7 @@
         },
         {
           "name": "W. Basketball",
-          "selected": false
+          "selected": true
         }
       ]
     },
@@ -70,7 +70,7 @@
       "teams": [
         {
           "name": "W. Track & Field",
-          "selected": false
+          "selected": true
         },
         {
           "name": "W. Cross Country",
@@ -83,7 +83,7 @@
       "teams": [
         {
           "name": "W. Golf",
-          "selected": false
+          "selected": true
         },
         {
           "name": "W. Rowing",
@@ -96,7 +96,7 @@
       "teams": [
         {
           "name": "W. Gymnastics",
-          "selected": false
+          "selected": true
         },
         {
           "name": "W. Soccer",
@@ -113,7 +113,7 @@
         },
         {
           "name": "M. Track & Field",
-          "selected": false
+          "selected": true
         }
       ]
     },
@@ -122,7 +122,7 @@
       "teams": [
         {
           "name": "W. Tennis",
-          "selected": false
+          "selected": true
         },
         {
           "name": "W. Volleyball",
