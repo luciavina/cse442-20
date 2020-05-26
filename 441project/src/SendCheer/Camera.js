@@ -48,9 +48,6 @@ class Camera extends Component {
     
     saveImage = () => {
 
-      // base.putString(message, 'base64').then(function(snapshot) {
-      //   console.log('Uploaded a base64 string!');
-
         const image = this.state.img_data.substring(23, this.state.img_data.length);
         const uploadTask = storage.ref(`images/${this.state.img_id}`).putString(image, 'base64');
         uploadTask.on(
