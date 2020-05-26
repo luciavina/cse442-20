@@ -3,91 +3,87 @@ import Webcam from "react-webcam";
 import Button from "react-bootstrap/Button";
 import {Link} from "react-router-dom";
 import "../MakePrediction/Prediction.css";
+import {base} from '../base';
 
 class Camera extends Component {
 
-  state= {
-    createImageData: null,
-    image_name:"",
-    saveImage: false
-  }
-
-  setRef = (webcam) => {
-    this.webcam = webcam;
-  }
-
-  capture = () => {
-    console.log("hello");
-    const imageSrc = this.webcam.getScreenshot();
-    this.setState({
-      imageData : imageSrc
-    })
-  };
-
-  saveForm = () => {
-    return (
-        <div>
-          <form onSubmit={this.handleSaveSubmit}>
-              <p>
-                <label>Image name: </label>
-                <input type="text"
-                  name="image_name"
-                       value={this.state.image_name}
-                       onChange={this.handleChange} />
-                       <input type="submit" value="Save" />
-              </p>
-          </form>
-        </div>
-    )
-  }
-
-  handleSaveSubmit = (e) => {
-    e.preventDefault();
-    let imageObject = {
-      image_name: this.state.image_name,
-      job_id: this.props.job.id,
-      image_data: this.state.imageData
+    constructor(){
+      super();
+      const storageRef = firebase.storage().ref();
+      this.saveImage = this.saveImage.bind(this);
+      this.state = {
+            img_id: null,
+            img_data: null,
+            saveImage: false,
+            images: { }
+          }
     }
-  }
+    
+    // componentDidMount() {
+    //    this.imgRef = base.syncState('images', {
+    //      context:this,
+    //      state:'images'
+    //     });
+    // }
+    //
+    // componentWillUnmount() {
+    //   base.removeBinding(this.imgRef);
+    // }
 
-  handleChange = (e) => {
-    e.persist();
-    this.setState({
-      [e.target.name]: e.target.value
-    })
-  }
-
-  onClickSave = (e) => {
-    e.persist();
-    this.setState((previousState) => {
-      return {
-        saveImage: !previousState.saveImage
+    setRef = (webcam) => {
+        this.webcam = webcam;
       }
-    });
-  }
-
-  onClickRetake = (e) => {
-    e.persist();
-    this.setState({
-      imageData: null
-    })
-  }
-
-  render() {
-    const videoConstraints = {
-      width: 1280,
-      height: 720,
-      facingMode: "user"
+  
+    capture = () => {
+      const imageSrc = this.webcam.getScreenshot();
+      const imageSrcShort = this.webcam.getScreenshot().substring(23, imageSrc.length);
+      console.log(imageSrc);
+      console.log(imageSrcShort);
+      this.setState({
+        img_id: Date.now(),
+        img_data: imageSrc
+      });
     };
+    
+    saveImage = () => {
+      const imgs = {...this.state.words};
+      imgs[this.state.img_id] = 'apple';
+      console.log('here');
+      base.putString(message, 'base64').then(function(snapshot) {
+        console.log('Uploaded a base64 string!');
+      });
+    }
+
+    handleChange = (e) => {
+      e.persist();
+      this.setState({
+        [e.target.name]: e.target.value
+      })
+    }
+  
+
+    retake = (e) => {
+      e.persist();
+      this.setState({
+        img_id: null,
+        img_data: null
+      })
+    }
+
+    render() {
+      const videoConstraints = {
+        width: 1280,
+        height: 720,
+        facingMode: "user"
+      };
 
     return (
         <div className="controlbutton">
-          {this.state.imageData ?
+          {this.state.img_data ?
               <div className="camerabutton">
-                <p><img src={this.state.imageData} alt=""/></p>
-                <span><Button onClick={this.onClickRetake}>Retake</Button></span>
-                <span><Button onClick={this.onClickSave}>Save</Button></span>
-                {this.state.saveImage ? this.saveForm() : null}
+                <p><img src={this.state.img_data} alt=""/></p>
+                <span><Button onClick={this.retake}>Retake</Button></span>
+                <span><Button onClick={this.saveImage}>Save</Button></span>
               </div>
               :
           <div>
