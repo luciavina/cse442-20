@@ -1,4 +1,5 @@
-import app from 'firebase/app'
+import firebase from 'firebase/app';
+import 'firebase/storage';
 
 // Your web app's Firebase configuration
 const config = {
@@ -11,9 +12,7 @@ const config = {
     appId: process.env.REACT_APP_FIREBASE_APP_ID
 };
 
-class Firebase {
-    constructor() {
-        app.initializeApp(config);
-    }
-}
-export default Firebase;
+firebase.initializeApp(config);
+const storage = firebase.storage();
+
+export {firebase, storage as default};

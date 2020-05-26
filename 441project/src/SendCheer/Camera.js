@@ -3,19 +3,20 @@ import Webcam from "react-webcam";
 import Button from "react-bootstrap/Button";
 import {Link} from "react-router-dom";
 import "../MakePrediction/Prediction.css";
-import {base} from '../base';
+import storage from '../base';
 
 class Camera extends Component {
 
-    constructor(){
-      super();
-      const storageRef = firebase.storage().ref();
-      this.saveImage = this.saveImage.bind(this);
+    constructor(props){
+      super(props);
+      // const storageRef = firebase.storage().ref();
+      // this.saveImage = this.saveImage.bind(this);
       this.state = {
-            img_id: null,
+            img_id: 0,
             img_data: null,
+            ulr: "",
+            progress: 0,
             saveImage: false,
-            images: { }
           }
     }
     
@@ -46,20 +47,40 @@ class Camera extends Component {
     };
     
     saveImage = () => {
-      const imgs = {...this.state.words};
-      imgs[this.state.img_id] = 'apple';
-      console.log('here');
-      base.putString(message, 'base64').then(function(snapshot) {
-        console.log('Uploaded a base64 string!');
-      });
-    }
 
-    handleChange = (e) => {
-      e.persist();
-      this.setState({
-        [e.target.name]: e.target.value
-      })
+      // base.putString(message, 'base64').then(function(snapshot) {
+      //   console.log('Uploaded a base64 string!');
+
+        const image = this.state.img_data.substring(23, this.state.img_data.length);
+        const uploadTask = storage.ref(`images/${this.state.img_id}`).putString(image, 'base64');
+        uploadTask.on(
+            "state_changed",
+            snapshot => {
+                // progress function ...
+                const progress = Math.round(
+                    (snapshot.bytesTransferred / snapshot.totalBytes) * 100
+                );
+                this.setState({ progress });
+            },
+            error => {
+                // Error function ...
+                console.log(error);
+            },
+            () => {
+                // complete function ...
+                storage
+                    .ref("images")
+                    .child(this.state.img_id.toString())
+                    .getDownloadURL()
+                    .then(url => {
+                        this.setState({ url });
+                    });
+            }
+        );
+      // });
     }
+    
+    
   
 
     retake = (e) => {
