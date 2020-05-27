@@ -12,12 +12,12 @@
     },
     {
       "id": 3,
-      "challenge": "Max Push-Ups in 1 Minute Challenge",
+      "challenge": "10 Minute Abs Challenge",
       "complete": true
     },
     {
       "id": 4,
-      "challenge": "10 Minute Abs Challenge",
+      "challenge": "Max Push-Ups in 1 Minute Challenge",
       "complete": false
     },
     {
@@ -32,7 +32,7 @@
     },
     {
       "id": 7,
-      "challenge": "Longest run challenge",
+      "challenge": "Longest Run challenge",
       "complete": false
     },
     {

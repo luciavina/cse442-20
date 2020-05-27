@@ -1,25 +1,36 @@
-.select p {
-     padding: 10px;
-     font-size: 16px;
-     margin: 1.5px;
-     background-color: rebeccapurple;
-     color: #fff;
-     border: 2px solid rebeccapurple;
-     width: 170px;
-     border-radius: 5px;
- }
-.unselect p {
-    padding: 10px;
+#select p {
+    padding: 5px;
     font-size: 16px;
-    margin: 1.5px;
-    background-color: slategray;
+    background-color: #4F4199;
     color: #fff;
-    border: 2px solid slategrey;
-    width: 170px;
-    border-radius: 5px;
+    border: 2px solid #4F4199;
+    width: 350px;
+    height: 40px;
+    font-family: "Century Gothic";
+ }
+#unselect p {
+    padding: 5px;
+    font-size: 16px;
+    background-color: #ABABAB;
+    color: #fff;
+    border: 2px solid #ABABAB;
+    width: 350px;
+    height: 40px;
+    font-family: "Century Gothic";
 }
 .group {
     border: 15px solid white;
     display: flex;
     justify-content: center;
+}
+.result {
+    width: 600px;
+    height: 40px;
+    border-radius: 5px;
+    background-color: #F6F6F6;
+}
+.result p{
+    margin-top: 8px;
+    color: black;
+    font-family: "Century Gothic";
 }

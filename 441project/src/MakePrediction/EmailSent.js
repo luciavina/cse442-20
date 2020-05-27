@@ -19,6 +19,9 @@ export default class EmailSent extends Component {
   render() {
     return (
       <div className="controlbutton">
+        <div className="top">
+          <h1>MAKE A PREDICTION</h1>
+        </div>
         <h1>Email receipt has been sent to:</h1>
         <br/>
         <h2> {this.state.netId}@uw.edu</h2>

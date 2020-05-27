@@ -16,7 +16,8 @@ class Camera extends Component {
 
     constructor(props){
       super(props);
-      //this.canvas = React.createRef();  
+      // const storageRef = firebase.storage().ref();
+      // this.saveImage = this.saveImage.bind(this);
       this.state = {
             img_id: 0,
             img_data: null,
@@ -26,6 +27,17 @@ class Camera extends Component {
             img_canvas: null
           }
     }
+    
+    // componentDidMount() {
+    //    this.imgRef = base.syncState('images', {
+    //      context:this,
+    //      state:'images'
+    //     });
+    // }
+    //
+    // componentWillUnmount() {
+    //   base.removeBinding(this.imgRef);
+    // }
 
     setRef = (webcam) => {
         this.webcam = webcam;
@@ -38,6 +50,8 @@ class Camera extends Component {
     capture = () => {
       const imageSrc = this.webcam.getScreenshot();
       const imageSrcShort = this.webcam.getScreenshot().substring(23, imageSrc.length);
+      console.log(imageSrc);
+      console.log(imageSrcShort);
       this.setState({
         img_id: Date.now(),
         img_data: imageSrc
@@ -112,10 +126,13 @@ class Camera extends Component {
         facingMode: "user"
       };
 
-        //todo render the image as a canvas first>????
     return (
         <div className="controlbutton">
-            {this.state.img_data ?
+          <div className="top">
+            <h1>Send a Cheer</h1>
+          </div>
+          <br/>
+          {this.state.img_data ?
               <div className="camerabutton">
                   <canvas ref={this.setCanvasRef} width={1280} height={720} />
                 <p><img ref="photo" src={this.state.img_data} alt="" onClick={this.placeSticker}/></p>
@@ -124,7 +141,6 @@ class Camera extends Component {
                   <span><Button onClick={this.selectSticker}><img src={emoji} alt="emoji"/></Button></span>
                   <img src={emoji} alt="emoji"/>
               </div>
-
               :
           <div>
             <Webcam

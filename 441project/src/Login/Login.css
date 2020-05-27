@@ -14,3 +14,6 @@
 .header Button:hover {
     background-color: palegoldenrod;
 }
+.header {
+    width: 800px;
+}

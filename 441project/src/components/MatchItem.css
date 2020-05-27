@@ -1,15 +1,25 @@
 .predictbtn {
-    padding: 10px;
+    padding: 5px;
     font-size: 16px;
-    margin: 4px;
-    background-color: lightslategrey;
+    background-color: #ABABAB;
     color: #fff;
-    border: 2px solid lightslategrey;
-    width: 170px;
+    border: 2px solid #ABABAB;
+    width: 350px;
     border-radius: 5px;
+    height: 40px;
+    font-family: "Century Gothic";
 }
-
 #group {
     border: 15px solid white;
-
+    background-color: #F6F6F6;
+}
+.space {
+    width: 200px;
+    height: 40px;
+    border-radius: 5px;
+}
+.space p{
+    margin-top: 8px;
+    color: black;
+    font-family: "Century Gothic";
 }

@@ -7,7 +7,9 @@ class SendCheer extends Component {
   render() {
     return (
         <div>
-          <h1>Send a Cheer</h1>
+          <div className="top">
+            <h1>Send a Cheer</h1>
+          </div>
           <br/>
           <h2> Who are you rooting for?</h2>
           <br/>

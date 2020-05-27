@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import {Link} from "react-router-dom";
 import Button from "react-bootstrap/Button";
-import "./Login.css"
+import "../MakePrediction/Prediction.css";
 
 class Login extends Component {
   constructor(props) {
@@ -15,7 +15,10 @@ class Login extends Component {
 
   render() {
     return (
-      <div className="header">
+      <div className="controlbutton">
+        <div className="top">
+          <h1>MAKE A PREDICTION</h1>
+        </div>
         <h1>Enter Your UW NetID</h1>
         <br/>
         <form>
