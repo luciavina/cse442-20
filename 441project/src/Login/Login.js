@@ -19,7 +19,14 @@ class Login extends Component {
         <div className="top">
           <h1>MAKE A PREDICTION</h1>
         </div>
-        <h1>Enter Your UW NetID</h1>
+        <div className="predInfo">
+          <p>Make your predictions as to which athletic teams will win their weekly face off.</p>
+          <p>Choose as many or as few teams as you want.</p>
+          <p>Check back in next week to see how your predictions compare to the real results!</p>
+          <h6><b>*Restricted to students and faculty of University of Washington</b></h6>
+        </div>
+        <br/>
+        <h2>Enter Your UW NetID</h2>
         <br/>
         <form>
           <input type="text" name="netId" value={this.state.netId} onChange={this.handleChange}

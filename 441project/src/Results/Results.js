@@ -1,5 +1,6 @@
 import React, {Component} from "react";
 import Button from 'react-bootstrap/Button'
+import Container from 'react-bootstrap/Container'
 import Weeks from "../components/Weeks";
 import {Link} from "react-router-dom";
 import "../MakePrediction/Prediction.css";
@@ -20,10 +21,9 @@ export default class Results extends Component {
           <div className="top">
             <h1>Results</h1>
           </div>
-          <br/>
           <h3>Weekly Results</h3>
-          <div className="controlbutton">
             <Weeks weeks={this.state.weeks}/>
+            <div className="controlbutton">
             <Link to={{
               pathname: '/'
             }}>

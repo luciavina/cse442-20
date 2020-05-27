@@ -1,25 +1,24 @@
 .weekbtn Button {
-    background-color: lightslategrey;
+    background-color: #B0A8DC;
     text-align: left;
-    width: 450px;
+    width: 475px;
     padding: 10px;
     font-size: 20px;
     margin: 8.5px;
-}
-.weekbtn Button:hover {
-    background-color: goldenrod;
+    border: none;
+    font-family: "Century Gothic";
 }
 .inactive Button {
-    background-color: lightgray;
+    background-color: #F1F0F7;
     text-align: left;
-    width: 450px;
+    width: 475px;
     padding: 10px;
     font-size: 20px;
     margin: 8.5px;
+    border: none;
+    color: lightslategrey;
+    font-family: "Century Gothic";
 }
 .inactive Button:hover {
-    background-color: lightgray;
-}
-.inactive Button:hover {
-    background-color: lightgoldenrod;
+
 }

@@ -6,7 +6,6 @@ import "../MakePrediction/Prediction.css";
 import storage from '../base';
 import emoji from '../stickers/emoji.png';
 import smileyface from '../stickers/smileyface.png';
-import Resizer from 'react-image-file-resizer';
 // import { StickerPicker } from 'react-native-stickers';
 // import { styles, View, Text } from "react-native";
 

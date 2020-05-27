@@ -1,11 +1,8 @@
 .controlbutton Button {
     margin: 4px;
     font-size: 24px;
-    background-color: goldenrod;
-    border: goldenrod;
-}
-.controlbutton Button:hover {
-    background-color: palegoldenrod;
+    background-color: #bfb6ff;
+    border: #bfb6ff;
 }
 .top {
     background-color: #4F4199;
@@ -30,4 +27,17 @@ h2 {
 }
 h3 {
     font-family: "Century Gothic";
+}
+.weekNav {
+    text-align: left;
+    margin: 10px;
+}
+.predInfo {
+    background-color: #F5F3FF;
+    padding: 20px;
+}
+.predInfo p {
+    font-family: "Century Gothic";
+    font-size: 32px;
+    text-align: center;
 }

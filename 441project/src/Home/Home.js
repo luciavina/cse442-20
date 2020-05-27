@@ -1,6 +1,7 @@
 import React, {Component} from 'react';
 import history from './../history';
 import {button} from 'react';
+import Container from 'react-bootstrap/Container'
 import "./Home.css"
 import logo from './DawgPack.png'
 
