@@ -4,6 +4,13 @@ import Button from "react-bootstrap/Button";
 import {Link} from "react-router-dom";
 import "../MakePrediction/Prediction.css";
 import storage from '../base';
+import emoji from '../stickers/emoji.png';
+import smileyface from '../stickers/smileyface.png';
+import Resizer from 'react-image-file-resizer';
+// import { StickerPicker } from 'react-native-stickers';
+// import { styles, View, Text } from "react-native";
+
+
 
 class Camera extends Component {
 
@@ -17,6 +24,7 @@ class Camera extends Component {
             ulr: "",
             progress: 0,
             saveImage: false,
+            img_canvas: null
           }
     }
     
@@ -34,6 +42,10 @@ class Camera extends Component {
     setRef = (webcam) => {
         this.webcam = webcam;
       }
+
+    setCanvasRef = (canvas) => {
+        this.canvas = canvas;
+    }
   
     capture = () => {
       const imageSrc = this.webcam.getScreenshot();
@@ -44,6 +56,8 @@ class Camera extends Component {
         img_id: Date.now(),
         img_data: imageSrc
       });
+      const canvas = this.canvas;
+      this.makePic(canvas);
     };
     
     saveImage = () => {
@@ -77,15 +91,32 @@ class Camera extends Component {
       // });
     }
     
-    
-  
-
     retake = (e) => {
       e.persist();
       this.setState({
         img_id: null,
         img_data: null
       })
+    }
+    
+    selectSticker = (e) => {
+        this.setState({
+            sticker_id: emoji
+        });
+    }
+    
+    placeSticker = (e) => {
+        
+    }
+    makePic = (canvas) => {
+        console.log("hello");
+        const ctx = canvas.getContext("2d");
+        const img = new Image();
+        img.src = this.state.img_data;
+        console.log('fjdksljf')
+        img.onload = () => {
+            ctx.drawImage(img, 0, 0, 1280, 720);
+        };
     }
 
     render() {
@@ -103,18 +134,21 @@ class Camera extends Component {
           <br/>
           {this.state.img_data ?
               <div className="camerabutton">
-                <p><img src={this.state.img_data} alt=""/></p>
+                  <canvas ref={this.setCanvasRef} width={1280} height={720} />
+                <p><img ref="photo" src={this.state.img_data} alt="" onClick={this.placeSticker}/></p>
                 <span><Button onClick={this.retake}>Retake</Button></span>
                 <span><Button onClick={this.saveImage}>Save</Button></span>
+                  <span><Button onClick={this.selectSticker}><img src={emoji} alt="emoji"/></Button></span>
+                  <img src={emoji} alt="emoji"/>
               </div>
               :
           <div>
             <Webcam
                 audio={false}
-                height={720}
+                height={500}
                 ref={this.setRef}
                 screenshotFormat="image/jpeg"
-                width={1280}
+                width={1000}
                 videoConstraints={videoConstraints}
             />
             <div className="camerabutton">
