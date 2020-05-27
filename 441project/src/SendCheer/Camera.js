@@ -97,6 +97,10 @@ class Camera extends Component {
 
     return (
         <div className="controlbutton">
+          <div className="top">
+            <h1>Send a Cheer</h1>
+          </div>
+          <br/>
           {this.state.img_data ?
               <div className="camerabutton">
                 <p><img src={this.state.img_data} alt=""/></p>
@@ -107,10 +111,10 @@ class Camera extends Component {
           <div>
             <Webcam
                 audio={false}
-                height={500}
+                height={720}
                 ref={this.setRef}
                 screenshotFormat="image/jpeg"
-                width={1000}
+                width={1280}
                 videoConstraints={videoConstraints}
             />
             <div className="camerabutton">

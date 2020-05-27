@@ -17,7 +17,11 @@ export default class Results extends Component {
   render() {
     return (
         <div>
-          <h1>Results</h1>
+          <div className="top">
+            <h1>Results</h1>
+          </div>
+          <br/>
+          <h3>Weekly Results</h3>
           <div className="controlbutton">
             <Weeks weeks={this.state.weeks}/>
             <Link to={{

@@ -8,11 +8,11 @@ export default class ConfirmItem extends Component {
     const {teams} = this.props.match;
     return (
         <div className="group">
-          <div className={teams[0].selected ? 'select' : 'unselect'}>
+          <div id={teams[0].selected ? 'select' : 'unselect'}>
               <p>{teams[0].name}</p>
           </div>
-          vs.
-          <div className={teams[1].selected ? 'select' : 'unselect'}>
+          <div className="result"><p>VS.</p></div>
+          <div id={teams[1].selected ? 'select' : 'unselect'}>
               <p>{teams[1].name}</p>
           </div>
         </div>

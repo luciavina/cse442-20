@@ -7,7 +7,27 @@
 .controlbutton Button:hover {
     background-color: palegoldenrod;
 }
-.camerabutton Button {
-    border-radius: 30px;
-    background-color: darkred;
+.top {
+    background-color: #4F4199;
+    height: 200px;
+}
+.top h1 {
+    color: white;
+    font-size: 120px;
+    padding: 20px;
+    font-family: Impact;
+    text-align: right;
+}
+.controlbutton input {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid lightgray;
+    border-radius: 5px;
+    width: 300px;
+}
+h2 {
+    font-family: "Century Gothic";
+}
+h3 {
+    font-family: "Century Gothic";
 }

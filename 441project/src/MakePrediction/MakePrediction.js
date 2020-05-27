@@ -57,11 +57,13 @@ export default class MakePrediction extends Component {
   render() {
     return (
       <div>
-        <h1>Make a Prediction</h1>
+        <div className="top">
+          <h1>MAKE A PREDICTION</h1>
+        </div>
         <br/>
-        <h2> Week 4: most push-ups in 1 minute</h2>
+        <h2>Week 4</h2>
+        <h3>Which team of each face off do you think will have the most (avg) pushups in 1 minute?</h3>
         <br/>
-        <h4>Tap to select winning teams</h4>
         <Matches matches={this.state.matches} conf={this.state.isConfirmation} recordPrediction={this.recordPrediction}/>
         <div className="controlbutton">
           <Link to={{

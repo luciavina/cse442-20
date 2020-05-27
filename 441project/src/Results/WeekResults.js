@@ -25,13 +25,25 @@ export default class WeekResults extends Component {
     const url = window.location.href;
     return (
         <div className="controlbutton">
-          <h1>Results</h1>
+          <div className="top">
+            <h1>MAKE A PREDICTION</h1>
+          </div>
+          <br/>
           {url === "http://localhost:3000/Results/WeekOneResults"
-          ? <ConfirmMatches matches={this.state.week1}/>
+            ? <div>
+              <h3>Week 1: Best team dance</h3>
+                <ConfirmMatches matches={this.state.week1}/>
+              </div>
           : url === "http://localhost:3000/Results/WeekTwoResults"
-          ? <ConfirmMatches matches={this.state.week2}/>
-          : <ConfirmMatches matches={this.state.week3}/>}
-
+          ? <div>
+                <h3>Week 2: Fastest 100m sprint</h3>
+                <ConfirmMatches matches={this.state.week2}/>
+            </div>
+          : <div>
+                <h3>Week 3: Best 10 minute abs workout</h3>
+              <ConfirmMatches matches={this.state.week3}/>
+              </div>
+          }
           <Link to={{
             pathname: '/Results'
           }}>
