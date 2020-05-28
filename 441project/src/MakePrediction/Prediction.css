@@ -24,13 +24,7 @@ input {
     border-radius: 5px;
     width: 300px;
 }
-h2 {
-    font-family: "Century Gothic";
-}
-h3 {
-    font-family: "Century Gothic";
-}
-p {
+h2, h3, p {
     font-family: "Century Gothic";
 }
 .weekNav {
@@ -69,11 +63,7 @@ p {
     text-align: left;
     background-color: #4F4199;
 }
-.home Button {
-    background-color: #4F4199;
-    border: none;
-}
-.home Button:hover {
+.home Button, .home Button:hover {
     background-color: #4F4199;
     border: none;
 }

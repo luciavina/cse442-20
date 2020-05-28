@@ -1,4 +1,4 @@
-.weekbtn Button {
+.weekbtn Button, .weekbtn Button:hover {
     background-color: #B0A8DC;
     text-align: left;
     width: 475px;
@@ -8,7 +8,7 @@
     border: none;
     font-family: "Century Gothic";
 }
-.inactive {
+.inactive Button, .inactive Button:hover {
     background-color: #F1F0F7;
     text-align: left;
     width: 475px;
