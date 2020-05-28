@@ -11,6 +11,7 @@ import EmailSent from "./MakePrediction/EmailSent";
 import Login from "./Login/Login"
 import history from './history';
 import ImageUpload from "./SendCheer/ImageUpload";
+import KonvaTutorial from "./SendCheer/KonvaTutorial";
 
 export default class Routes extends Component {
   render() {
@@ -27,6 +28,7 @@ export default class Routes extends Component {
             <Route path="/Results/WeekTwoResults" exact component = {WeekResults}/>
             <Route path="/Results/WeekThreeResults" exact component = {WeekResults}/>
             <Route path={'/ImageUploader'} exact component = {ImageUpload}/>
+            <Route path={'/Konva'} exact component = {KonvaTutorial}/>
         </BrowserRouter>
     )
   }
