@@ -3,6 +3,7 @@ import ConfirmMatches from "../components/ConfirmMatches";
 import Button from "react-bootstrap/Button";
 import {Link} from "react-router-dom";
 import "../MakePrediction/Prediction.css";
+import home from "../Home.PNG"
 import week1data from "../data/Week1Results.json";
 import week2data from "../data/Week2Results.json";
 import week3data from "../data/Week2Results.json";
@@ -24,7 +25,15 @@ export default class WeekResults extends Component {
   render() {
     const url = window.location.href;
     return (
-        <div className="controlbutton">
+        <div>
+          <div className="home">
+            <Link to={{
+              pathname: '/'
+            }}>
+              <Button><img src={home} alt="Home" /></Button>
+            </Link>
+          </div>
+          <div className="controlbutton"></div>
           <div className="top">
             <h1>RESULTS</h1>
           </div>

@@ -6,6 +6,7 @@ import "../MakePrediction/Prediction.css";
 import storage from '../base';
 import emoji from '../stickers/emoji.png';
 import smileyface from '../stickers/smileyface.png';
+import home from "../Home.PNG";
 import {Image, Layer, Stage} from "react-konva";
 // import { StickerPicker } from 'react-native-stickers';
 // import { styles, View, Text } from "react-native";
@@ -123,6 +124,14 @@ class Camera extends Component {
       };
 
     return (
+      <div>
+      <div className="home">
+        <Link to={{
+          pathname: '/'
+        }}>
+          <Button><img src={home} alt="Home" /></Button>
+        </Link>
+      </div>
         <div className="controlbutton">
           <div className="top">
             <h1>Send a Cheer</h1>
@@ -159,6 +168,7 @@ class Camera extends Component {
             <Button>Back</Button>
           </Link>
         </div>
+      </div>
         );
   }
 }

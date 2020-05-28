@@ -4,6 +4,7 @@ import Button from 'react-bootstrap/Button'
 import {Link} from 'react-router-dom';
 import "./Prediction.css"
 import data from "../data/Matches.json";
+import home from "../Home.PNG";
 
 export default class MakePrediction extends Component {
 
@@ -57,6 +58,13 @@ export default class MakePrediction extends Component {
   render() {
     return (
       <div>
+        <div className="home">
+          <Link to={{
+            pathname: '/'
+          }}>
+            <Button><img src={home} alt="Home" /></Button>
+          </Link>
+        </div>
         <div className="top">
           <h1>MAKE A PREDICTION</h1>
         </div>

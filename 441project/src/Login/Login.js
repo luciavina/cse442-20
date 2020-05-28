@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import {Link} from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import "../MakePrediction/Prediction.css";
+import home from "../Home.PNG";
 
 class Login extends Component {
   constructor(props) {
@@ -15,6 +16,14 @@ class Login extends Component {
 
   render() {
     return (
+      <div>
+      <div className="home">
+        <Link to={{
+          pathname: '/'
+        }}>
+          <Button><img src={home} alt="Home" /></Button>
+        </Link>
+      </div>
       <div className="controlbutton">
         <div className="top">
           <h1>MAKE A PREDICTION</h1>
@@ -25,7 +34,6 @@ class Login extends Component {
           <p>Check back in next week to see how your predictions compare to the real results!</p>
           <h6><b>*Restricted to students and faculty of University of Washington</b></h6>
         </div>
-        <br/>
         <h2>Enter Your UW NetID</h2>
         <br/>
         <form>
@@ -33,19 +41,15 @@ class Login extends Component {
             placeholder={"Enter netID"}/>
         </form>
         <Link to={{
-          pathname: '/',
-        }}>
-          <br/>
-          <Button>Back</Button>
-        </Link>
-        <Link to={{
           pathname: '/MakePrediction',
           state: {
             netId: this.state.netId
           }
         }}>
+          <br/>
           <Button>Login</Button>
         </Link>
+      </div>
       </div>
     );
   }
