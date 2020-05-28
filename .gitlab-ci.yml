@@ -1,0 +1,29 @@
+stages:
+  - build
+  - deploy
+build:
+  stage: build
+  tags:
+    - Pages
+script:
+    - echo "Building deploy package"
+    - npm install
+    - npm run-script build
+    - echo "Build successful"
+  artifacts:
+    expire_in: 1 hour
+    paths:
+      - build
+deploy_production:
+  stage: deploy
+  tags:
+    - Pages
+  script:
+    - echo "Deploying to server"
+    - npm start
+    - echo "Deployed"
+  environment:
+    name: dawgpackshowdown
+    url: dawgpackshowdown.com
+  only:
+    - master
