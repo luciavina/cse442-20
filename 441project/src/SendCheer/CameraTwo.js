@@ -3,9 +3,6 @@ import Webcam from "react-webcam";
 import Button from "react-bootstrap/Button";
 import {Link} from "react-router-dom";
 import "../MakePrediction/Prediction.css";
-import storage from '../base';
-import emoji from '../stickers/emoji.png';
-import smileyface from '../stickers/smileyface.png';
 import home from "../Home.PNG";
 import CameraTwo2 from "./CameraTwo2"
 
