@@ -28,6 +28,24 @@
 .container h2 {
     color: white;
 }
+.container p {
+    color: white;
+    font-size: 24px;
+    width: 300px;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: left;
+    padding: 5px;
+    border-radius: 3px;
+}
+.leader {
+    border: solid white 5px;
+    width: fit-content;
+    padding: 3%;
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 3px;
+}
 .category {
     background-color: whitesmoke;
     border-radius: 10px;

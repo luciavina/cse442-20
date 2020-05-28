@@ -27,6 +27,15 @@ export default class Home extends Component {
               <div className="container">
                 <h2>Week 4 - Which team in each face off can do the most pushups in <u>1 minute</u></h2><br/>
                 <br/>
+                <div className="leader">
+                <h2><b>Top 5 Leaderboard</b></h2>
+                <p>1. M Baseball</p>
+                <p>2. W. Golf</p>
+                <p>3. W. Soccer</p>
+                <p>4. M. Basketball</p>
+                <p>5. M. Rowing</p>
+                </div>
+                <br/>
               </div>
           </div>
     );
