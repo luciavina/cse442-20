@@ -12,6 +12,9 @@ import Login from "./Login/Login"
 import history from './history';
 import ImageUpload from "./SendCheer/ImageUpload";
 import KonvaTutorial from "./SendCheer/KonvaTutorial";
+import CameraTwo from "./SendCheer/CameraTwo";
+import CameraTwo2 from "./SendCheer/CameraTwo2";
+import CheerSent from "./SendCheer/CheerSent"
 
 export default class Routes extends Component {
   render() {
@@ -22,13 +25,13 @@ export default class Routes extends Component {
             <Route path="/MakePrediction" exact component={MakePrediction} />
             <Route path="/MakePrediction/Sent" exact component={EmailSent}/>
             <Route path="/SendCheer" exact component={SendCheer} />
-            <Route path="/SendCheer/Camera" exact component={Camera} />
+            <Route path="/SendCheer/Camera" exact component={CameraTwo} />
+            <Route path="/SendCheer/Edit" exact component={CameraTwo2} />
             <Route path="/Results" exact component={Results} />
             <Route path="/Results/WeekOneResults" exact component = {WeekResults}/>
             <Route path="/Results/WeekTwoResults" exact component = {WeekResults}/>
             <Route path="/Results/WeekThreeResults" exact component = {WeekResults}/>
-            <Route path={'/ImageUploader'} exact component = {ImageUpload}/>
-            <Route path={'/Konva'} exact component = {KonvaTutorial}/>
+            <Route path="/SendCheer/Sent" exact component = {CheerSent}/>
         </BrowserRouter>
     )
   }
