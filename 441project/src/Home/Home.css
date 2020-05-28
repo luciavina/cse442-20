@@ -22,7 +22,6 @@
 }
 .container {
     width: 800px;
-    margin-left: 35%;
     margin-top: 3%;
 }
 .container h2 {
@@ -66,6 +65,7 @@
 }
 .screen {
     background-color: #4F4199;
+    height: 100vh;
 }
 .info {
     background-color: white;

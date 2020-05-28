@@ -63,10 +63,14 @@ class CameraTwo extends Component {
                             width={1000}
                             videoConstraints={videoConstraints}
                         />
-                        <div className="camerabutton">
-                            <Button onClick={this.capture}>Capture Photo</Button>
+                        <div className="cam">
+                            <Button onClick={this.capture}> </Button>
                         </div>
                     </div>}
+                    <Link to={{pathname: '/SendCheer'}}>
+                        <br/>
+                        <Button>Back</Button>
+                    </Link>
                     {this.state.img_data ?
                         <Link to={{
                             pathname: "/SendCheer/Edit",
@@ -75,15 +79,11 @@ class CameraTwo extends Component {
                                 img_id: this.state.img_id
                             }
                         }}>
-                            <br/>
                             <Button>Next</Button>
                         </Link>
                         :null
                     }
-                    <Link to={{pathname: '/SendCheer'}}>
-                        <br/>
-                        <Button>Back</Button>
-                    </Link>
+
                 </div>
             </div>
         );

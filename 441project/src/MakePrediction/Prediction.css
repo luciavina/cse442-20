@@ -5,14 +5,16 @@
     border: #bfb6ff;
     padding: 12px;
 }
+.controlbutton {
+    height: 90vh;
+}
 .top {
     background-color: #4F4199;
-    height: 160px;
 }
 .top h1 {
     color: white;
     font-size: 120px;
-    padding-bottom: 60px;
+    padding-bottom: 40px;
     padding-right: 40px;
     font-family: Impact;
     text-align: right;
@@ -66,4 +68,12 @@ h2, h3, p {
 .home Button, .home Button:hover {
     background-color: #4F4199;
     border: none;
+}
+.cam Button {
+    height: 50px;
+    width: 50px;
+    border-radius: 30px;
+    border: solid lightgrey 6px;
+    background-color: darkgray;
+
 }
