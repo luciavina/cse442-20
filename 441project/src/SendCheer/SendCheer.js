@@ -18,13 +18,27 @@ class SendCheer extends Component {
           <div className="top">
             <h1>Send a Cheer</h1>
           </div>
+          <div className="cheerInfo">
+          <div>
+            <h1>Step 1:</h1>
+            <h2>Take a fun and supportive photo by yourself or with friends!</h2>
+          </div>
           <br/>
-          <h2> Who are you rooting for?</h2>
+          <div>
+            <h1>Step 2:</h1>
+            <h2>Customize your cheer with fun, UW themed stickers.</h2>
+          </div>
           <br/>
-          <h2>Take a photo or record a video to cheer them on! </h2>
+          <div>
+            <h1>Step 3:</h1>
+            <h2>Pick which teams to send your cheer to and support them in the challenge.</h2>
+          </div>
           <br/>
-          <h2> Your cheer will be sent to their team dashboard and you can choose to have your cheer displayed here on the Dawgpack Showdown display.</h2>
-          <br/>
+          <div>
+            <h1>Step 4:</h1>
+            <h2>View your display on the outside screens of the booth!</h2>
+          </div>
+          </div>
           <div className="controlbutton">
           <Link to={{
             pathname: '/SendCheer/Camera'

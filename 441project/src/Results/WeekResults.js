@@ -6,7 +6,7 @@ import "../MakePrediction/Prediction.css";
 import home from "../Home.PNG"
 import week1data from "../data/Week1Results.json";
 import week2data from "../data/Week2Results.json";
-import week3data from "../data/Week2Results.json";
+import week3data from "../data/Week3Results.json";
 
 export default class WeekResults extends Component {
   constructor(props) {
@@ -33,7 +33,7 @@ export default class WeekResults extends Component {
               <Button><img src={home} alt="Home" /></Button>
             </Link>
           </div>
-          <div className="controlbutton"></div>
+          <div className="controlbutton">
           <div className="top">
             <h1>RESULTS</h1>
           </div>
@@ -59,6 +59,7 @@ export default class WeekResults extends Component {
             <br/>
             <Button>Back</Button>
           </Link>
+        </div>
         </div>
 
     );

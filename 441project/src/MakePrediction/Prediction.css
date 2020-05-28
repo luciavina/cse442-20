@@ -1,8 +1,9 @@
 .controlbutton Button {
     margin: 4px;
-    font-size: 24px;
+    font-size: 36px;
     background-color: #bfb6ff;
     border: #bfb6ff;
+    padding: 12px;
 }
 .top {
     background-color: #4F4199;
@@ -16,7 +17,7 @@
     font-family: Impact;
     text-align: right;
 }
-.controlbutton input {
+input {
     padding: 10px;
     font-size: 16px;
     border: 2px solid lightgray;
@@ -29,6 +30,9 @@ h2 {
 h3 {
     font-family: "Century Gothic";
 }
+p {
+    font-family: "Century Gothic";
+}
 .weekNav {
     text-align: left;
     margin: 10px;
@@ -36,12 +40,25 @@ h3 {
 .predInfo {
     background-color: #F5F3FF;
     padding: 20px;
-    margin-bottom: 7%;
+    margin-bottom: 3%;
+    padding: 4%;
 }
 .predInfo p {
     font-family: "Century Gothic";
     font-size: 32px;
     text-align: center;
+}
+.cheerInfo {
+    background-color: #F5F3FF;
+    padding: 20px;
+    margin-bottom: 7%;
+    text-align: left;
+    display: flex;
+    padding: 4%;
+    margin-top: 7%;
+}
+.cheerInfo h2 {
+    width: 65%;
 }
 .home img {
     width: 70px;
