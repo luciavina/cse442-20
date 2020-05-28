@@ -6,37 +6,22 @@ import "../MakePrediction/Prediction.css";
 import storage from '../base';
 import emoji from '../stickers/emoji.png';
 import smileyface from '../stickers/smileyface.png';
+import {Image, Layer, Stage} from "react-konva";
 // import { StickerPicker } from 'react-native-stickers';
 // import { styles, View, Text } from "react-native";
-
-
 
 class Camera extends Component {
 
     constructor(props){
       super(props);
-      // const storageRef = firebase.storage().ref();
-      // this.saveImage = this.saveImage.bind(this);
       this.state = {
             img_id: 0,
             img_data: null,
-            ulr: "",
             progress: 0,
             saveImage: false,
-            img_canvas: null
+            sticker_id: null
           }
     }
-    
-    // componentDidMount() {
-    //    this.imgRef = base.syncState('images', {
-    //      context:this,
-    //      state:'images'
-    //     });
-    // }
-    //
-    // componentWillUnmount() {
-    //   base.removeBinding(this.imgRef);
-    // }
 
     setRef = (webcam) => {
         this.webcam = webcam;
@@ -49,14 +34,20 @@ class Camera extends Component {
     capture = () => {
       const imageSrc = this.webcam.getScreenshot();
       const imageSrcShort = this.webcam.getScreenshot().substring(23, imageSrc.length);
-      console.log(imageSrc);
-      console.log(imageSrcShort);
+      // const WebCamImage = () => {
+      //       const [image] = useImage(imageSrc);
+      //       return <Image image={image} />;
+      //   };
+      // const thisImage = WebCamImage();
       this.setState({
         img_id: Date.now(),
-        img_data: imageSrc
+        img_data: imageSrc,
+          //img_konva: thisImage
       });
       const canvas = this.canvas;
       this.makePic(canvas);
+
+
     };
     
     saveImage = () => {
@@ -87,7 +78,6 @@ class Camera extends Component {
                     });
             }
         );
-      // });
     }
     
     retake = (e) => {
@@ -100,23 +90,30 @@ class Camera extends Component {
     
     selectSticker = (e) => {
         this.setState({
-            sticker_id: emoji
+            sticker_id: e.target.id
         });
     }
     
     placeSticker = (e) => {
-        
+        console.log(e.target);
     }
+    
     makePic = (canvas) => {
-        console.log("hello");
-        const ctx = canvas.getContext("2d");
-        const img = new Image();
-        img.src = this.state.img_data;
-        console.log('fjdksljf')
-        img.onload = () => {
-            ctx.drawImage(img, 0, 0, 1280, 720);
-        };
+        // console.log("hello");
+        // const ctx = canvas.getContext("2d");
+        // const img = new Image();
+        // img.src = this.state.img_data;
+        // console.log('fjdksljf')
+        // img.onload = () => {
+        //     ctx.drawImage(img, 0, 0, 1280, 720);
+        // };
     }
+    
+    stageClick = (e) => {
+        console.log("stage click")
+    
+    }
+
 
     render() {
       const videoConstraints = {
@@ -133,12 +130,12 @@ class Camera extends Component {
           <br/>
           {this.state.img_data ?
               <div className="camerabutton">
-                  <canvas ref={this.setCanvasRef} width={1280} height={720} />
-                <p><img ref="photo" src={this.state.img_data} alt="" onClick={this.placeSticker}/></p>
+                  <Stage width={1280} height={720} onClick={this.stageClick}></Stage>
+                  <img ref="photo" src={this.state.img_data} alt="" />
                 <span><Button onClick={this.retake}>Retake</Button></span>
                 <span><Button onClick={this.saveImage}>Save</Button></span>
-                  <span><Button onClick={this.selectSticker}><img src={emoji} alt="emoji"/></Button></span>
-                  <img src={emoji} alt="emoji"/>
+                  <span><Button onClick={this.selectSticker}><img id="emoji" src={emoji} alt="emoji"/></Button></span>
+                  <span><Button onClick={this.selectSticker}><img id="smileyface" src={smileyface} alt="smileyface"/></Button></span>
               </div>
               :
           <div>
