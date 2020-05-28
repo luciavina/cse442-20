@@ -4,7 +4,6 @@ stages:
 build:
   stage: build
   tags:
-    - <tag you provided while registering the token>
     - Pages
   script:
     - echo "Building deploy package"
@@ -18,14 +17,13 @@ build:
 deploy_production:
   stage: deploy
   tags:
-    - <tag you provided while registering the token>
-    - <second tag>
+    - Pages
   script:
     - echo "Deploying to server"
     - npm start
     - echo "Deployed"
   environment:
-    name: production
+    name: dawgpackshowdown
     url: dawgpackshowdown.com
   only:
     - master
