@@ -9,9 +9,7 @@ import WeekResults from "./Results/WeekResults";
 import Home from "./Home/Home";
 import EmailSent from "./MakePrediction/EmailSent";
 import Login from "./Login/Login"
-import history from './history';
-import ImageUpload from "./SendCheer/ImageUpload";
-import KonvaTutorial from "./SendCheer/KonvaTutorial";
+import history from './history'
 import CameraTwo from "./SendCheer/CameraTwo";
 import CameraTwo2 from "./SendCheer/CameraTwo2";
 import CheerSent from "./SendCheer/CheerSent"
