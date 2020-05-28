@@ -12,6 +12,17 @@
 #select img {
     width: 25px;
 }
+#unselect {
+    padding: 5px;
+    font-size: 16px;
+    background-color: slategrey;
+    color: #fff;
+    border: 2px solid slategrey;
+    width: 320px;
+    height: 40px;
+    font-family: "Century Gothic";
+    font-weight: bold;
+}
 .group {
     border: 15px solid white;
     display: flex;

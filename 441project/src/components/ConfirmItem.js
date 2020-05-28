@@ -9,18 +9,12 @@ export default class ConfirmItem extends Component {
     const {teams} = this.props.match;
     return (
         <div className="group">
-          <div id="select">
+          <div id={teams[0].selected ? "select" : "unselect"}>
             {teams[0].selected ? <img src={star} alt="star"/> : ""}
             {teams[0].name}
           </div>
-          <div className="result">
-            <p>{teams[0].selected ? <div>win</div> : <div>lose</div>}</p>
-          </div>
           <div className="middle"><p>VS.</p></div>
-          <div className="result">
-            <p>{teams[1].selected ? <div>win</div> : <div>lose</div>}</p>
-          </div>
-          <div id="select">
+          <div id={teams[1].selected ? "select" : "unselect"}>
             {teams[1].name}
             {teams[1].selected ? <img src={star} alt="star"/> : ""}
           </div>

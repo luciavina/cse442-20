@@ -26,7 +26,7 @@ class Login extends Component {
       </div>
       <div className="controlbutton">
         <div className="top">
-          <h1>MAKE A PREDICTION</h1>
+          <h1>MAKE YOUR PREDICTIONS</h1>
         </div>
         <div className="predInfo">
           <p>Make your predictions as to which athletic teams will win their weekly face off.</p>

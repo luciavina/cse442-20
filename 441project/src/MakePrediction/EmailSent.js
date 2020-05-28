@@ -29,7 +29,7 @@ export default class EmailSent extends Component {
       </div>
       <div className="controlbutton">
         <div className="top">
-          <h1>MAKE A PREDICTION</h1>
+          <h1>MAKE YOUR PREDICTIONS</h1>
         </div>
         <br/>
         <h1>Email receipt has been sent to:</h1>
