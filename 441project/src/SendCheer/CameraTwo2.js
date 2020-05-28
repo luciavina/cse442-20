@@ -64,21 +64,19 @@ class CameraTwo2 extends Component {
                 return{filter_id: filter + 1}
             });
         }
-        console.log("here", filter)
+
+        const canv = this.canvas.current;
+        const ctx = canv.getContext('2d');
+        ctx.clearRect(0,0,canv.width, canv.height);
         const img = this.cheer.current;
-        const ctx = this.canvas.current.getContext('2d');
-        img.onload = () => {
-            console.log('ummmm')
-            ctx.drawImage(img, 0, 0);
-            ctx.font = "40px Courier";
-            ctx.fillText(`GO TEAeeeeeM!!!${text}`, 210, 75);
-            ctx.drawImage(sticker, 50, 50);
-            const cheerImage = this.canvas.current.toDataURL("image/jpeg",1);
-            this.setState({
-                    canv_image: cheerImage
-                }
-            );
-        }
+        ctx.drawImage(img, 0, 0);
+        ctx.font = "40px Courier";
+        ctx.fillText(`GO TEAeeeeeM!!!${text}`, 210, 75);
+        ctx.drawImage(sticker, 50, 50);
+        const cheerImage = this.canvas.current.toDataURL("image/jpeg",1);
+        this.setState({
+            canv_image: cheerImage
+            });
     }
 
     saveImage = () => {
