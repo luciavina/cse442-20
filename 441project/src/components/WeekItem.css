@@ -8,7 +8,7 @@
     border: none;
     font-family: "Century Gothic";
 }
-.inactive Button {
+.inactive {
     background-color: #F1F0F7;
     text-align: left;
     width: 475px;
@@ -18,7 +18,7 @@
     border: none;
     color: lightslategrey;
     font-family: "Century Gothic";
+    margin-left: auto;
+    margin-right: auto;
 }
-.inactive Button:hover {
 
-}

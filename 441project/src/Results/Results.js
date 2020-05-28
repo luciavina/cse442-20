@@ -5,6 +5,7 @@ import Weeks from "../components/Weeks";
 import {Link} from "react-router-dom";
 import "../MakePrediction/Prediction.css";
 import data from "../data/Weeks.json";
+import home from "../Home.PNG";
 
 export default class Results extends Component {
   constructor(props) {
@@ -18,18 +19,20 @@ export default class Results extends Component {
   render() {
     return (
         <div>
-          <div className="top">
-            <h1>Results</h1>
-          </div>
-          <h3>Weekly Results</h3>
-            <Weeks weeks={this.state.weeks}/>
-            <div className="controlbutton">
+          <div className="home">
             <Link to={{
               pathname: '/'
             }}>
-              <br/>
-              <Button>Back</Button>
+              <Button><img src={home} alt="Home" /></Button>
             </Link>
+          </div>
+          <div className="top">
+            <h1>Results</h1>
+          </div>
+          <br/>
+          <h3>Weekly Results</h3>
+            <Weeks weeks={this.state.weeks}/>
+            <div className="controlbutton">
           </div>
         </div>
 

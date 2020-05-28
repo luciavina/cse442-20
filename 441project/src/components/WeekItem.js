@@ -31,7 +31,7 @@ export default class WeekItem extends Component {
                 </div>
 
               : <div className="inactive">
-                    <Button>Week {this.props.week.id}: {this.props.week.challenge}</Button>
+                    Week {this.props.week.id}: {this.props.week.challenge}
                  </div>
           }
         </div>

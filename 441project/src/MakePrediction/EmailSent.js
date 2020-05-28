@@ -2,6 +2,7 @@ import React, {Component} from 'react';
 import {Link} from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import "./Prediction.css"
+import home from "../Home.PNG";
 
 export default class EmailSent extends Component {
   state  = {
@@ -18,10 +19,19 @@ export default class EmailSent extends Component {
 
   render() {
     return (
+      <div>
+      <div className="home">
+        <Link to={{
+          pathname: '/'
+        }}>
+          <Button><img src={home} alt="Home" /></Button>
+        </Link>
+      </div>
       <div className="controlbutton">
         <div className="top">
           <h1>MAKE A PREDICTION</h1>
         </div>
+        <br/>
         <h1>Email receipt has been sent to:</h1>
         <br/>
         <h2> {this.state.netId}@uw.edu</h2>
@@ -34,6 +44,7 @@ export default class EmailSent extends Component {
             <Button>Done</Button>
           </Link>
         </div>
+      </div>
     );
   }
 }
