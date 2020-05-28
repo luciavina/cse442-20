@@ -6,7 +6,7 @@
     background-color: #B0A8DC;
     color: #fff;
     border: 2px solid #B0A8DC;
-    width: 125%;
+    width: 110%;
     border-radius: 0px 10px 10px 0px;
     text-align: right;
 }
@@ -66,9 +66,8 @@
 }
 .screen {
     background-color: #4F4199;
-    height: 1335px;
 }
-.info{
+.info {
     background-color: white;
 }
 .info button{
@@ -79,6 +78,10 @@
     color: white;
     font-size: 24px;
     border: white;
-    margin-left: 90%;
+    margin-right: 90%;
     margin-top: 20px;
+}
+#ques {
+    border: solid white 2px;
+    border-radius: 30px;
 }

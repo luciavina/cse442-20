@@ -10,7 +10,7 @@ export default class Home extends Component {
     return (
           <div className="screen">
             <div className="info">
-              <button onClick={() => history.push('/Login')}>?</button>
+              <button onClick={() => history.push('/Login')}><div id="ques">?</div></button>
             </div>
             <div className="logo">
             <img src={logo} alt="Dawg Pack Showdown" />

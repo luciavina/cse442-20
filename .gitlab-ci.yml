@@ -5,7 +5,7 @@ build:
   stage: build
   tags:
     - Pages
-  script:
+script:
     - echo "Building deploy package"
     - npm install
     - npm run-script build
