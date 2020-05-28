@@ -10,14 +10,14 @@ export default class Home extends Component {
     return (
           <div className="screen">
             <div className="info">
-              <button onClick={() => history.push('/Login')}>i</button>
+              <button onClick={() => history.push('/Login')}>?</button>
             </div>
             <div className="logo">
             <img src={logo} alt="Dawg Pack Showdown" />
             </div>
             <div className="nav">
               <form>
-                <button onClick={() => history.push('/Login')}>Make a Prediction</button>
+                <button onClick={() => history.push('/Login')}>Make Your Predictions</button>
                 <br/>
                 <button onClick={() => history.push('/SendCheer')}>Send a Cheer</button>
                 <br/>
@@ -29,7 +29,7 @@ export default class Home extends Component {
                 <br/>
                 <div className="leader">
                 <h2><b>Top 5 Leaderboard</b></h2>
-                <p>1. M Baseball</p>
+                <p>1. M. Baseball</p>
                 <p>2. W. Golf</p>
                 <p>3. W. Soccer</p>
                 <p>4. M. Basketball</p>

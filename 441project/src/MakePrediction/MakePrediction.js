@@ -66,7 +66,7 @@ export default class MakePrediction extends Component {
           </Link>
         </div>
         <div className="top">
-          <h1>MAKE A PREDICTION</h1>
+          <h1>MAKE YOUR PREDICTIONS</h1>
         </div>
         <br/>
         <h2>Week 4</h2>
