@@ -5,15 +5,6 @@ build:
   stage: build
   tags:
     - Pages
-  script:
-    - echo "Building deploy package"
-    - npm install
-    - npm run-script build
-    - echo "Build successful"
-  artifacts:
-    expire_in: 1 hour
-    paths:
-      - build
 deploy_production:
   stage: deploy
   tags:
