@@ -1,27 +1,23 @@
-.nav button {
-    padding: 10px;
-    padding-right: 30px;
-    font-size: 26px;
+.nav button, .nav button:hover {
+    padding: 1.2vh;
+    padding-right: 1vw;
+    font-size: 2vh;
     font-family: "Century Gothic";
-    margin-bottom: 20px;
+    margin-bottom: 2vh;
     background-color: #B0A8DC;
     color: #fff;
-    border: 2px solid #B0A8DC;
+    border: none;
     width: 35vh;
-    border-radius: 0px 10px 10px 0px;
+    border-radius: 0px 0.7vh 0.7vh 0px;
     text-align: right;
-}
-.nav button:hover {
-    background-color: #bfb6ff;
-    border: 2px solid #bfb6ff;
 }
 .nav {
     justify-content: left;
-    margin-top: 7%;
+    margin-top: 4vh;
     float: left;
 }
 .container {
-    margin-top: 2%;
+    margin-top: 2vh;
 }
 .container h2 {
     color: white;
@@ -29,24 +25,12 @@
 .container img {
    height: 50vh;
 }
-.leader {
-    border: solid white 5px;
-    width: fit-content;
-    padding: 3%;
-    border-radius: 3px;
-}
-.category {
-    background-color: whitesmoke;
-    border-radius: 10px;
-    width: 200px;
-    margin: 20px;
-}
 .logo {
     background-color: white;
     display: flex;
 }
 .logo img{
-    width: 25%;
+    width: 27vw;
     margin-left: auto;
     margin-right: auto;
 }
