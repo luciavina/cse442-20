@@ -14,6 +14,7 @@ import CameraTwo from "./SendCheer/CameraTwo";
 import CameraTwo2 from "./SendCheer/CameraTwo2";
 import CheerSent from "./SendCheer/CheerSent"
 import Info from "./Home/Info";
+import ExteriorDisplay from "./ExteriorDisplay/ExteriorDisplay";
 
 export default class Routes extends Component {
   render() {
@@ -32,6 +33,7 @@ export default class Routes extends Component {
             <Route path="/Results/WeekTwoResults" exact component = {WeekResults}/>
             <Route path="/Results/WeekThreeResults" exact component = {WeekResults}/>
             <Route path="/SendCheer/Sent" exact component = {CheerSent}/>
+            <Route path="/ExteriorDisplay" exact component = {ExteriorDisplay}/>
         </BrowserRouter>
     )
   }
