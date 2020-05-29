@@ -49,7 +49,8 @@ class CameraTwo extends Component {
                     <div className="top">
                         <h1>Send a Cheer</h1>
                     </div>
-                    <br/>{this.state.img_data ?
+                    <br/>
+                    {this.state.img_data ?
                     <div>
                         <img ref="photo" src={this.state.img_data} alt="" />
                     </div>

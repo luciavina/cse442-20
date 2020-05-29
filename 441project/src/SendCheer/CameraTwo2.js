@@ -21,7 +21,8 @@ class CameraTwo2 extends Component {
             img_data: '',
             canv_image:'',
             img_id: null,
-            filter_id: 0
+            filter_id: 0,
+            max_filters: 2
         };
     }
     
@@ -134,9 +135,12 @@ class CameraTwo2 extends Component {
                 <img className="hidden" ref={this.cheer} src={this.state.img_data} alt="" />
                 <img className="hidden" ref={this.emoji} src={emoji} alt="" />
                 <img className="hidden" ref={this.logo} src={logo} alt="" />
-                
+                {(this.state.filter_id !== 0) ?
                 <span><Button id="prev" onClick={this.changeFilter}>Prev Filter</Button></span>
+                    :null}
+                    {(this.state.filter_id !== this.state.max_filters) ?
                 <span><Button id="next" onClick={this.changeFilter}>Next Filter</Button></span>
+                    :null}
                     <Link to={{
                         pathname: '/SendCheer/Sent'
                     }}>
