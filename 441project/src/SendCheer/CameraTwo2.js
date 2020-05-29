@@ -133,7 +133,7 @@ class CameraTwo2 extends Component {
                 <canvas ref={this.canvas} width={1280} height={720} />
                 <img className="hidden" ref={this.cheer} src={this.state.img_data} alt="" />
                 <img className="hidden" ref={this.emoji} src={emoji} alt="" />
-                <img className="hidden" ref={this.logo} src={logo} width={50} height alt="" />
+                <img className="hidden" ref={this.logo} src={logo} alt="" />
                 
                 <span><Button id="prev" onClick={this.changeFilter}>Prev Filter</Button></span>
                 <span><Button id="next" onClick={this.changeFilter}>Next Filter</Button></span>
