@@ -27,7 +27,7 @@ export default class Home extends Component {
               </form>
             </div>
               <div className="container">
-                <h2>Week 4 - Which team in each face off can do the most pushups in <u>1 minute</u></h2><br/>
+                <h2>Week 4 - Which teams can do the most pushups in <u>1 minute</u>?</h2><br/>
                 <h2><b>Current Leaderboard</b></h2>
                   <img src={leader} alt="Leaderboard" />
                 <br/>

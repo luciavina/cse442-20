@@ -1,9 +1,10 @@
 .controlbutton Button, .controlbutton Button:hover {
     margin: 4px;
-    font-size: 3vh;
+    font-size: 2.6vh;
     background-color: #bfb6ff;
     border: #bfb6ff;
-    height: 6vh;
+    padding: 1vh;
+    border-radius: 0.7vh;
 }
 .top {
     background-color: #4F4199;
@@ -53,8 +54,9 @@ h2, h3, p {
 }
 .cheerInfo h2 {
     font-size: 2.3vh;
-    width: 20vw;
+    width: 19vw;
     margin-left: 3vw;
+    margin-top: 1.5vh;
 }
 .cheerInfo h1 {
     font-size: 3vh;
@@ -86,10 +88,6 @@ h2, h3, p {
     background-color: #4F4199;
     border-color: #4F4199;
 }
-.infoPage {
-    background-color: #F5F3FF;
-    height: 100vh;
-}
 .infoPage p {
     font-family: "Century Gothic";
     font-size: 2.5vh;
@@ -97,6 +95,10 @@ h2, h3, p {
     width: 55vw;
     margin-left: auto;
     margin-right: auto;
+}
+.infoHead {
+    background-color: #F5F3FF;
+    padding-bottom: 1vh;
 }
 .categories {
     display: flex;
@@ -128,6 +130,9 @@ h2, h3, p {
     border: 2px solid #bfb6ff;
     font-family: "Century Gothic";
     font-size: 2vh;
+}
+.boxes h6 {
+    font-size: 1.2vh;
 }
 .sent img {
     height: 40vh;

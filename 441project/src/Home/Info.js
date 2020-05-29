@@ -20,15 +20,18 @@ export default class Info extends Component {
         <div className="top">
           <h1>WHAT IS DAWG PACK SHOWDOWN?</h1>
         </div>
-        <br/>
         <div>
-          <p>Dawg Pack Showdown is a 10 week fitness based competition where UW athletic teams face off against one another to earn points and climb up the leaderboard!</p>
-          <p>Your job is to support your favorite teams to do their best!</p><br/>
+          <div className="infoHead">
+            <br/>
+            <p>Dawg Pack Showdown is a 10 week fitness based competition where UW athletic teams face off against one another to earn points and climb up the leaderboard!</p>
+            <p>Your job is to support your favorite teams to do their best!</p>
+          </div>
+          <br/>
           <p><b>WHAT CAN YOU DO?</b></p>
           <div className="categories">
             <div className="boxes">
               <h3>Make your Predictions</h3>
-              <p>Predict which teams will succeed in their face off challenge of the week!</p><p>These predictions will then be sent to your UW email for safe keeping.</p><p>Come back next week to compare your predictions with the results (in View Results)</p><p>Get all your friends involved! (Note: restricted to UW students only)</p>
+              <p>Predict which teams will succeed in their face off challenge of the week!</p><p>These predictions will then be sent to your UW email for safe keeping.</p><p>Come back next week to compare your predictions with the results (in View Results).</p><p>Get all your friends involved! <h6>(Note: restricted to UW students/faculty only)</h6></p>
               <Link to={{
                 pathname: '/Login'
               }}>
