@@ -18,9 +18,13 @@
 }
 .container {
     margin-top: 2vh;
+    width: fit-content;
 }
 .container h2 {
     color: white;
+    width: 45vw;
+    margin-right: auto;
+    margin-left: auto;
 }
 .container img {
    height: 50vh;
