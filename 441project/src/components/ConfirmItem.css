@@ -1,52 +1,42 @@
 #select {
-    padding: 5px;
-    font-size: 16px;
+    padding: 0.5vh;
+    font-size: 1.3vh;
     background-color: #4F4199;
     color: #fff;
-    border: 2px solid #4F4199;
-    width: 320px;
-    height: 40px;
+    border: 0.2vh solid #4F4199;
+    width: 12.5vw;
+    height: 3.5vh;
     font-family: "Century Gothic";
     font-weight: bold;
 }
 #select img {
-    width: 25px;
+    width: 2vh;
 }
 #unselect {
-    padding: 5px;
-    font-size: 16px;
-    background-color: slategrey;
+    padding: 0.5vh;
+    font-size: 1.3vh;
+    background-color: #ABABAB;
     color: #fff;
-    border: 2px solid slategrey;
-    width: 320px;
-    height: 40px;
+    border: 0.2vh solid #ABABAB;
+    width: 12.5vw;
+    height: 3.5vh;
     font-family: "Century Gothic";
     font-weight: bold;
 }
 .group {
-    border: 15px solid white;
+    border: 1.5vh solid white;
     display: flex;
     justify-content: center;
 }
-.result {
-    width: 270px;
-    height: 40px;
-    border-radius: 5px;
-    background-color: #F6F6F6;
-}
-.result p {
-    margin-top: 8px;
-    color: black;
-    font-family: "Century Gothic";
-}
 .middle {
     width: 100px;
-    height: 40px;
+    height: 3.5vh;
     border-radius: 5px;
     background-color: #F6F6F6;
 }
 .middle p {
-    margin-top: 8px;
+    margin-top: 0.7vh;
     color: black;
+    font-size: 1.2vh;
     font-family: "Century Gothic";
 }

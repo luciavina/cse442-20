@@ -31,12 +31,8 @@ export default class Results extends Component {
           </div>
           <br/>
           <h3>Weekly Results</h3>
+          <p>Week 4 results available Monday @ 8am</p>
             <Weeks weeks={this.state.weeks}/>
-          <Link to={{
-            pathname: '/'
-          }}>
-            <Button>Back</Button>
-          </Link>
         </div>
 
     );

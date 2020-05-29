@@ -40,16 +40,16 @@ export default class WeekResults extends Component {
           <br/>
           {url === "http://localhost:3000/Results/WeekOneResults"
             ? <div>
-              <h3>Week 1: Best team dance</h3>
+              <h3>Week 1: Dance-Off Challenge</h3>
                 <ConfirmMatches matches={this.state.week1}/>
               </div>
           : url === "http://localhost:3000/Results/WeekTwoResults"
           ? <div>
-                <h3>Week 2: Fastest 100m sprint</h3>
+                <h3>Week 2: 100m Sprint Challenge</h3>
                 <ConfirmMatches matches={this.state.week2}/>
             </div>
           : <div>
-                <h3>Week 3: Best 10 minute abs workout</h3>
+                <h3>Week 3: 10 Minute Abs Challenge</h3>
               <ConfirmMatches matches={this.state.week3}/>
               </div>
           }

@@ -3,9 +3,6 @@ import Webcam from "react-webcam";
 import Button from "react-bootstrap/Button";
 import {Link} from "react-router-dom";
 import "../MakePrediction/Prediction.css";
-import storage from '../base';
-import emoji from '../stickers/emoji.png';
-import smileyface from '../stickers/smileyface.png';
 import home from "../Home.PNG";
 import CameraTwo2 from "./CameraTwo2"
 
@@ -52,9 +49,10 @@ class CameraTwo extends Component {
                     <div className="top">
                         <h1>Send a Cheer</h1>
                     </div>
-                    <br/>{this.state.img_data ?
+                    <br/>
+                    {this.state.img_data ?
                     <div>
-                        <img ref="photo" src={this.state.img_data} alt="" />
+                        <CameraTwo2 img_data={this.state.img_data} img_id={this.state.img_id} />
                     </div>
                     :
                     <div>
@@ -66,10 +64,14 @@ class CameraTwo extends Component {
                             width={1000}
                             videoConstraints={videoConstraints}
                         />
-                        <div className="camerabutton">
-                            <Button onClick={this.capture}>Capture Photo</Button>
+                        <div className="cam">
+                            <Button onClick={this.capture}> </Button>
                         </div>
                     </div>}
+                    <Link to={{pathname: '/SendCheer'}}>
+                        <br/>
+                        <Button>Back</Button>
+                    </Link>
                     {this.state.img_data ?
                         <Link to={{
                             pathname: "/SendCheer/Edit",
@@ -78,15 +80,11 @@ class CameraTwo extends Component {
                                 img_id: this.state.img_id
                             }
                         }}>
-                            <br/>
                             <Button>Next</Button>
                         </Link>
                         :null
                     }
-                    <Link to={{pathname: '/SendCheer'}}>
-                        <br/>
-                        <Button>Back</Button>
-                    </Link>
+
                 </div>
             </div>
         );
