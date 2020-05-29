@@ -5,15 +5,3 @@
     border-radius: 5px;
     width: 300px;
 }
-.header Button {
-    margin: 4px;
-    font-size: 24px;
-    background-color: goldenrod;
-    border: goldenrod;
-}
-.header Button:hover {
-    background-color: palegoldenrod;
-}
-.header {
-    width: 800px;
-}

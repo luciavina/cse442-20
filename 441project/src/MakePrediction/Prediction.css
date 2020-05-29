@@ -1,9 +1,10 @@
 .controlbutton Button, .controlbutton Button:hover {
     margin: 4px;
-    font-size: 3vh;
+    font-size: 2.6vh;
     background-color: #bfb6ff;
     border: #bfb6ff;
-    height: 6vh;
+    padding: 1vh;
+    border-radius: 0.7vh;
 }
 .top {
     background-color: #4F4199;

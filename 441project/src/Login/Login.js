@@ -3,6 +3,7 @@ import {Link} from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import "../MakePrediction/Prediction.css";
 import home from "../Home.PNG";
+import star from "../components/WhiteStar.png";
 
 class Login extends Component {
   constructor(props) {
@@ -36,19 +37,26 @@ class Login extends Component {
         </div>
         <h2>Enter Your UW NetID</h2>
         <br/>
-        <form>
-          <input type="text" name="netId" value={this.state.netId} onChange={this.handleChange}
-            placeholder={"Enter netID"}/>
+        <form name="idForm">
+          <input type="text" ref="id" name="netId" value={this.state.netId} onChange={this.handleChange}
+            placeholder={"Ex. John123"}/>
         </form>
-        <Link to={{
-          pathname: '/MakePrediction',
-          state: {
-            netId: this.state.netId
+        <br/>
+        {!this.state.netId ?
+          <div>
+            <Button>Login</Button>
+            <p>*Must enter your netID</p>
+          </div>
+        :
+          <Link to={{
+            pathname: '/MakePrediction',
+            state: {
+              netId: this.state.netId
+            }
+          }}>
+            <Button>Login</Button>
+          </Link>
           }
-        }}>
-          <br/>
-          <Button>Login</Button>
-        </Link>
       </div>
       </div>
     );
