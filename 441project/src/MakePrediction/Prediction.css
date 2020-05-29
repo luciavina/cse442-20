@@ -1,19 +1,17 @@
-.controlbutton Button {
+.controlbutton Button, .controlbutton Button:hover {
     margin: 4px;
-    font-size: 36px;
+    font-size: 3vh;
     background-color: #bfb6ff;
     border: #bfb6ff;
-    padding: 12px;
-}
-.controlbutton {
-    height: 90vh;
+    height: 6vh;
 }
 .top {
     background-color: #4F4199;
+    height: 15vh;
 }
 .top h1 {
     color: white;
-    font-size: 120px;
+    font-size: 11vh;
     padding-bottom: 40px;
     padding-right: 40px;
     font-family: Impact;
@@ -29,51 +27,62 @@ input {
 h2, h3, p {
     font-family: "Century Gothic";
 }
-.weekNav {
-    text-align: left;
-    margin: 10px;
-}
 .predInfo {
     background-color: #F5F3FF;
-    padding: 20px;
     margin-bottom: 3%;
-    padding: 4%;
+    padding: 5vh;
+    height: 30vh;
 }
 .predInfo p {
     font-family: "Century Gothic";
-    font-size: 32px;
+    font-size: 2.5vh;
+    text-align: center;
+}
+.predInfo h6 {
+    font-family: "Century Gothic";
+    font-size: 2vh;
     text-align: center;
 }
 .cheerInfo {
     background-color: #F5F3FF;
-    padding: 20px;
-    margin-bottom: 7%;
+    margin-bottom: 15vh;
     text-align: left;
     display: flex;
-    padding: 4%;
-    margin-top: 7%;
+    padding: 7vh;
+    margin-top: 15vh;
 }
 .cheerInfo h2 {
-    width: 65%;
+    font-size: 2.3vh;
+    width: 20vw;
+    margin-left: 3vw;
+}
+.cheerInfo h1 {
+    font-size: 3vh;
+    margin-left: 3vw;
 }
 .home img {
-    width: 70px;
+    width: 7vh;
 }
 .home {
     padding-left: 1%;
     padding-top: 1%;
     text-align: left;
     background-color: #4F4199;
+    height: 0vh;
 }
 .home Button, .home Button:hover {
     background-color: #4F4199;
     border: none;
 }
-.cam Button {
+.cam Button, .cam Button:hover {
     height: 50px;
     width: 50px;
     border-radius: 30px;
     border: solid lightgrey 6px;
     background-color: darkgray;
-
+}
+.btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: #4F4199;
+    border-color: #4F4199;
 }

@@ -70,8 +70,8 @@ export default class MakePrediction extends Component {
         </div>
         <br/>
         <h2>Week 4</h2>
-        <h3>Which team of each face off do you think will have the most (avg) pushups in 1 minute?</h3>
-        <br/>
+        <h3>Which teams do you think will have the most (avg) pushups in 1 minute?</h3>
+        <h4><b>Tap which teams you think will win!</b></h4>
         <Matches matches={this.state.matches} conf={this.state.isConfirmation} recordPrediction={this.recordPrediction}/>
         <div className="controlbutton">
           <Link to={{

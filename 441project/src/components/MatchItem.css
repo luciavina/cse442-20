@@ -1,21 +1,30 @@
 .predictbtn {
     padding: 5px;
-    font-size: 16px;
+    font-size: 1.5vh;
     background-color: #ABABAB;
     color: #fff;
     border: 2px solid #ABABAB;
-    width: 350px;
+    width: 15vw;
     border-radius: 5px;
-    height: 40px;
+    height: 3.5vh;
     font-family: "Century Gothic";
 }
+.predictbtn:hover {
+    background-color: #ABABAB;
+    border: none;
+}
+.btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle {
+    color: #fff;
+    background-color: #4F4199;
+    border-color: #4F4199;
+}
 #group {
-    border: 15px solid white;
+    border: 1vh solid white;
     background-color: #F6F6F6;
 }
 .space {
     width: 200px;
-    height: 40px;
+    height: 3.5vh;
     border-radius: 5px;
 }
 .space p{
