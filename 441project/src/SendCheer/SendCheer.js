@@ -21,22 +21,22 @@ class SendCheer extends Component {
           <div className="cheerInfo">
           <div>
             <h1>Step 1:</h1>
-            <h2>Take a fun and supportive photo by yourself or with friends!</h2>
+            <h2>Take a fun and encouraging photo by yourself or with friends!</h2>
           </div>
           <br/>
           <div>
             <h1>Step 2:</h1>
-            <h2>Customize your cheer with fun, UW themed stickers.</h2>
+            <h2>Customize your cheer with fun, UW themed filters.</h2>
           </div>
           <br/>
           <div>
             <h1>Step 3:</h1>
-            <h2>Pick which teams to send your cheer to and support them in the challenge.</h2>
+            <h2>Pick which teams to motivate and send your cheer to.</h2>
           </div>
           <br/>
           <div>
             <h1>Step 4:</h1>
-            <h2>View your display on the outside screens of the booth!</h2>
+            <h2>View your cheer on outside displays of the booth!</h2>
           </div>
           </div>
           <div className="controlbutton">
