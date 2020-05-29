@@ -17,7 +17,24 @@ export default class CheerSent extends Component {
                 <div className="top">
                     <h1>Send a Cheer</h1>
                 </div>
-                <h1>your cheer was sent</h1>
+              <br/>
+              <div className="teams">
+                <h1>Your cheer was sent to:</h1>
+                <p>M. Basketball</p>
+                <p>W. Soccer</p>
+              </div>
+                <h4>Your cheer will be displayed on the external screens!</h4>
+              <div className="sent">
+                <img src="https://i.pinimg.com/originals/b5/0a/a2/b50aa2af9e269b0c520d383cad0e3aae.gif" alt="Go Huskies!" height="400"/>
+              </div>
+              <div className="controlbutton">
+                <Link to={{
+                  pathname: '/',
+                }}>
+                  <br/><br/>
+                  <Button>Done</Button>
+                </Link>
+              </div>
             </div>
         )
     }

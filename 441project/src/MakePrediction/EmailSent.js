@@ -36,7 +36,9 @@ export default class EmailSent extends Component {
         <br/>
         <h2> {this.state.netId}@uw.edu</h2>
         <br/>
-        <img src="https://i.pinimg.com/originals/b5/0a/a2/b50aa2af9e269b0c520d383cad0e3aae.gif" alt="Go Huskies!" height="400"/>
+        <div className="sent">
+          <img src="https://i.pinimg.com/originals/b5/0a/a2/b50aa2af9e269b0c520d383cad0e3aae.gif" alt="Go Huskies!" height="400"/>
+        </div>
           <Link to={{
             pathname: '/',
           }}>

@@ -35,7 +35,8 @@
     background-color: #F6F6F6;
 }
 .middle p {
-    margin-top: 1vh;
+    margin-top: 0.7vh;
     color: black;
+    font-size: 1.2vh;
     font-family: "Century Gothic";
 }
