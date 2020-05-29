@@ -3,8 +3,10 @@ import Button from "react-bootstrap/Button";
 import {Link} from "react-router-dom";
 import "../MakePrediction/Prediction.css";
 import storage from '../base';
-import emoji from '../stickers/emoji.png';
-import logo from '../stickers/DawgPack.png';
+import filter1 from '../stickers/Filter1.png';
+import filter2 from '../stickers/Filter2.png';
+import filter3 from '../stickers/Filter3.png';
+import filter4 from '../stickers/Filter4.png';
 import home from "../Home.PNG";
 import "./camera.css"
 
@@ -15,6 +17,11 @@ class CameraTwo2 extends Component {
         this.cheer = React.createRef();
         this.emoji = React.createRef();
         this.logo = React.createRef();
+        this.filter1 = React.createRef();
+        this.filter2 = React.createRef();
+        this.filter3 = React.createRef();
+        this.filter4 = React.createRef();
+        
         this.state = {
             img_data: '',
             canv_image:'',
@@ -37,10 +44,6 @@ class CameraTwo2 extends Component {
         const ctx = this.canvas.current.getContext('2d');
         img.onload = () => {
             ctx.drawImage(img, 0, 0);
-            // ctx.font = "40px Courier";
-            // ctx.fillStyle = 'white';
-            // ctx.fillText("GO TEAM!!! THIS IS FILTER 0", 210, 75);
-            ctx.drawImage(emoji, 50, 50);
             const cheerImage = this.canvas.current.toDataURL("image/jpeg",1);
             this.setState({
                     canv_image: cheerImage
@@ -52,16 +55,32 @@ class CameraTwo2 extends Component {
     
     changeFilter= (e) => {
 
-        const sticker = this.emoji.current;
-        const logo = this.logo.current;
-        const filters = [sticker, logo];
-        let filter = this.state.filter_id;
-        if(e.target.id === 'prev' && filter !== 0){
-            filter = filter - 1;
-        }else if(filter !== filters.length-1){
-            filter = filter + 1;
+        const filter1 = this.filter1.current;
+        const filter2 = this.filter2.current;
+        const filter3 = this.filter3.current;
+        const filter4 = this.filter4.current;
+        //const filters = [sticker, logo];
+        const filters = [filter1, filter2, filter3, filter4];
+        //let filter = this.state.filter_id;
+        
+        // if(e.target.id === 'prev' && filter !== 0){
+        //     filter = filter - 1;
+        // }else if(filter !== filters.length-1){
+        //     filter = filter + 1;
+        // }
+        
+        let filter = null;
+        console.log(e.target.id)
+        if(e.target.id ==="filter1" || e.target.id ==="filter11") {
+            console.log('fheuwi')
+            filter = filter1;
+        }else if(e.target.id ==="filter2" || e.target.id ==="filter22") {
+            filter = filter2;
+        }else if(e.target.id ==="filter3" || e.target.id ==="filter33"){
+            filter = filter3;
+        }else if(e.target.id ==="filter4" || e.target.id ==="filter44"){
+            filter = filter4;
         }
-        //let text = `this is filter${filter}`
 
         const canv = this.canvas.current;
         const ctx = canv.getContext('2d');
@@ -71,7 +90,11 @@ class CameraTwo2 extends Component {
         //ctx.font = "40px Courier";
         //ctx.fillText(`GO TEAeeeeeM!!!${text}`, 210, 75);
         console.log('filter val ', filter)
-        ctx.drawImage(filters[filter], 50, 50);
+        // ctx.drawImage(filters[filter], 50, 50);
+        
+        if( filter != null){
+            ctx.drawImage(filter, 0, 0);
+        } 
         const cheerImage = this.canvas.current.toDataURL("image/jpeg",1);
         this.setState({
             canv_image: cheerImage
@@ -122,8 +145,24 @@ class CameraTwo2 extends Component {
                 <div>
                 <canvas ref={this.canvas} width={1280} height={720} />
                 <img className="hidden" ref={this.cheer} src={this.state.img_data} alt="" />
-                <img className="hidden" ref={this.emoji} src={emoji} alt="" />
-                <img className="hidden" ref={this.logo} src={logo} alt="" />
+                <img className="hidden" ref={this.filter1} src={filter1} alt="" width={100}/>
+                <img className="hidden" ref={this.filter2} src={filter2} alt="" />
+                <img className="hidden" ref={this.filter3} src={filter3} alt="" />
+                <img className="hidden" ref={this.filter4} src={filter4} alt="" />
+                <span><Button id="filter1" onClick={this.changeFilter}>
+                    <img id="filter11" src={filter1} alt="Home" width={150} />
+                </Button></span>
+                <span><Button id="filter2" onClick={this.changeFilter}>
+                    <img id="filter22" src={filter2} alt="Home" width={150} />
+                </Button></span>
+                <span><Button id="filter3" onClick={this.changeFilter}>
+                    <img id="filter33" src={filter3} alt="Home" width={150} />
+                </Button></span>
+                <span><Button id="filter4" onClick={this.changeFilter}>
+                    <img id="filter44" src={filter4} alt="Home" width={150} /></Button></span>
+                <span><Button id="none" onClick={this.changeFilter}>No Filter</Button></span>
+                    
+                    
                 {(this.state.filter_id !== 0) ?
                 <span><Button id="prev" onClick={this.changeFilter}>Prev Filter</Button></span>
                     :null}
