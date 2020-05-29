@@ -5,6 +5,7 @@ import {Link} from "react-router-dom";
 import "../MakePrediction/Prediction.css";
 import storage from '../base';
 import emoji from '../stickers/emoji.png';
+import logo from '../stickers/DawgPack.png';
 import smileyface from '../stickers/smileyface.png';
 import home from "../Home.PNG";
 import "./camera.css"
@@ -14,7 +15,8 @@ class CameraTwo2 extends Component {
         super(props);
         this.canvas = React.createRef();
         this.cheer = React.createRef();
-        this.sticker = React.createRef();
+        this.emoji = React.createRef();
+        this.logo = React.createRef();
         this.state = {
             img_data: '',
             canv_image:'',
@@ -32,14 +34,14 @@ class CameraTwo2 extends Component {
         });
 
         const img = this.cheer.current;
-        const sticker = this.sticker.current;
+        const emoji = this.emoji.current;
         const ctx = this.canvas.current.getContext('2d');
         img.onload = () => {
             ctx.drawImage(img, 0, 0);
             ctx.font = "40px Courier";
             ctx.fillStyle = 'white';
             ctx.fillText("GO TEAM!!! THIS IS FILTER 0", 210, 75);
-            ctx.drawImage(sticker, 50, 50);
+            ctx.drawImage(emoji, 50, 50);
             const cheerImage = this.canvas.current.toDataURL("image/jpeg",1);
             this.setState({
                     canv_image: cheerImage
@@ -51,32 +53,39 @@ class CameraTwo2 extends Component {
     
     changeFilter= (e) => {
 
-        const sticker = this.sticker.current;
+        const sticker = this.emoji.current;
+        const logo = this.logo.current;
+        const filters = [sticker, logo];
         let filter = this.state.filter_id;
-        let text = `this is filter${filter}`
-
-        if(e.target.id === 'prev'){
-            this.setState((state) => {
-                return{filter_id: filter - 1}
-            });
-        }else{
-            this.setState((state) => {
-                return{filter_id: filter + 1}
-            });
+        if(e.target.id === 'prev' && filter !== 0){
+            filter = filter - 1;
+        }else if(filter !== filters.length-1){
+            filter = filter + 1;
         }
+        //let text = `this is filter${filter}`
 
         const canv = this.canvas.current;
         const ctx = canv.getContext('2d');
         ctx.clearRect(0,0,canv.width, canv.height);
         const img = this.cheer.current;
         ctx.drawImage(img, 0, 0);
-        ctx.font = "40px Courier";
-        ctx.fillText(`GO TEAeeeeeM!!!${text}`, 210, 75);
-        ctx.drawImage(sticker, 50, 50);
+        //ctx.font = "40px Courier";
+        //ctx.fillText(`GO TEAeeeeeM!!!${text}`, 210, 75);
+        console.log('filter val ', filter)
+        ctx.drawImage(filters[filter], 50, 50);
         const cheerImage = this.canvas.current.toDataURL("image/jpeg",1);
         this.setState({
             canv_image: cheerImage
             });
+        if(e.target.id === 'prev'){
+            this.setState((state) => {
+                return{filter_id: filter}
+            });
+        }else{
+            this.setState((state) => {
+                return{filter_id: filter}
+            });
+        }
     }
 
     saveImage = () => {
@@ -123,7 +132,9 @@ class CameraTwo2 extends Component {
                     </div>
                 <canvas ref={this.canvas} width={1280} height={720} />
                 <img className="hidden" ref={this.cheer} src={this.state.img_data} alt="" />
-                <img className="hidden" ref={this.sticker} src={emoji} alt="" />
+                <img className="hidden" ref={this.emoji} src={emoji} alt="" />
+                <img className="hidden" ref={this.logo} src={logo} width={50} height alt="" />
+                
                 <span><Button id="prev" onClick={this.changeFilter}>Prev Filter</Button></span>
                 <span><Button id="next" onClick={this.changeFilter}>Next Filter</Button></span>
                     <Link to={{
