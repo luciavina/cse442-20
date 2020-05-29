@@ -20,10 +20,13 @@ export default class Info extends Component {
         <div className="top">
           <h1>WHAT IS DAWG PACK SHOWDOWN?</h1>
         </div>
-        <br/>
         <div>
-          <p>Dawg Pack Showdown is a 10 week fitness based competition where UW athletic teams face off against one another to earn points and climb up the leaderboard!</p>
-          <p>Your job is to support your favorite teams to do their best!</p><br/>
+          <div className="infoHead">
+            <br/>
+            <p>Dawg Pack Showdown is a 10 week fitness based competition where UW athletic teams face off against one another to earn points and climb up the leaderboard!</p>
+            <p>Your job is to support your favorite teams to do their best!</p>
+          </div>
+          <br/>
           <p><b>WHAT CAN YOU DO?</b></p>
           <div className="categories">
             <div className="boxes">

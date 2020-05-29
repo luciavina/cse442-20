@@ -88,10 +88,6 @@ h2, h3, p {
     background-color: #4F4199;
     border-color: #4F4199;
 }
-.infoPage {
-    background-color: #F5F3FF;
-    height: 100vh;
-}
 .infoPage p {
     font-family: "Century Gothic";
     font-size: 2.5vh;
@@ -99,6 +95,10 @@ h2, h3, p {
     width: 55vw;
     margin-left: auto;
     margin-right: auto;
+}
+.infoHead {
+    background-color: #F5F3FF;
+    padding-bottom: 1vh;
 }
 .categories {
     display: flex;
