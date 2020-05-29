@@ -28,7 +28,7 @@ export default class Info extends Component {
           <div className="categories">
             <div className="boxes">
               <h3>Make your Predictions</h3>
-              <p>Predict which teams will succeed in their face off challenge of the week!</p><p>These predictions will then be sent to your UW email for safe keeping.</p><p>Come back next week to compare your predictions with the results (in View Results)</p><p>Get all your friends involved! (Note: restricted to UW students only)</p>
+              <p>Predict which teams will succeed in their face off challenge of the week!</p><p>These predictions will then be sent to your UW email for safe keeping.</p><p>Come back next week to compare your predictions with the results (in View Results).</p><p>Get all your friends involved! <h6>(Note: restricted to UW students/faculty only)</h6></p>
               <Link to={{
                 pathname: '/Login'
               }}>

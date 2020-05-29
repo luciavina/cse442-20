@@ -130,6 +130,9 @@ h2, h3, p {
     font-family: "Century Gothic";
     font-size: 2vh;
 }
+.boxes h6 {
+    font-size: 1.2vh;
+}
 .sent img {
     height: 40vh;
 }
