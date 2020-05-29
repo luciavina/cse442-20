@@ -1,12 +1,10 @@
 import React, { Component } from "react";
-import Webcam from "react-webcam";
 import Button from "react-bootstrap/Button";
 import {Link} from "react-router-dom";
 import "../MakePrediction/Prediction.css";
 import storage from '../base';
 import emoji from '../stickers/emoji.png';
 import logo from '../stickers/DawgPack.png';
-import smileyface from '../stickers/smileyface.png';
 import home from "../Home.PNG";
 import "./camera.css"
 
@@ -28,7 +26,7 @@ class CameraTwo2 extends Component {
     
     componentDidMount() {
 
-        const  { img_data, img_id} = this.props.location.state;
+        const  { img_data, img_id} = this.props;
         this.setState({
             img_data: img_data,
             img_id: img_id,
@@ -39,9 +37,9 @@ class CameraTwo2 extends Component {
         const ctx = this.canvas.current.getContext('2d');
         img.onload = () => {
             ctx.drawImage(img, 0, 0);
-            ctx.font = "40px Courier";
-            ctx.fillStyle = 'white';
-            ctx.fillText("GO TEAM!!! THIS IS FILTER 0", 210, 75);
+            // ctx.font = "40px Courier";
+            // ctx.fillStyle = 'white';
+            // ctx.fillText("GO TEAM!!! THIS IS FILTER 0", 210, 75);
             ctx.drawImage(emoji, 50, 50);
             const cheerImage = this.canvas.current.toDataURL("image/jpeg",1);
             this.setState({
@@ -122,15 +120,6 @@ class CameraTwo2 extends Component {
         return (
             <div>
                 <div>
-                    <div className="home">
-                        <Link to={{pathname: '/'}}>
-                            <Button><img src={home} alt="Home" /></Button>
-                        </Link>
-                    </div>
-                    <div className="controlbutton">
-                        <div className="top"><h1>Send a Cheer</h1></div>
-                        <br/>
-                    </div>
                 <canvas ref={this.canvas} width={1280} height={720} />
                 <img className="hidden" ref={this.cheer} src={this.state.img_data} alt="" />
                 <img className="hidden" ref={this.emoji} src={emoji} alt="" />

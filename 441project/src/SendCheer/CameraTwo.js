@@ -52,7 +52,7 @@ class CameraTwo extends Component {
                     <br/>
                     {this.state.img_data ?
                     <div>
-                        <img ref="photo" src={this.state.img_data} alt="" />
+                        <CameraTwo2 img_data={this.state.img_data} img_id={this.state.img_id} />
                     </div>
                     :
                     <div>
