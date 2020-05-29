@@ -1,7 +1,8 @@
 .nav button {
     padding: 10px;
     padding-right: 30px;
-    font-size: 32px;
+    font-size: 26px;
+    font-family: "Century Gothic";
     margin-bottom: 20px;
     background-color: #B0A8DC;
     color: #fff;
@@ -16,13 +17,11 @@
 }
 .nav {
     justify-content: left;
-    margin-top: 90px;
-    width: 25%;
+    margin-top: 7%;
     float: left;
 }
 .container {
-    width: 800px;
-    margin-top: 3%;
+    margin-top: 2%;
 }
 .container h2 {
     color: white;
@@ -37,38 +36,33 @@
     padding: 5px;
     border-radius: 3px;
 }
+.container img {
+   height: 50vh;
+}
 .leader {
     border: solid white 5px;
     width: fit-content;
     padding: 3%;
-    margin-right: auto;
-    margin-left: auto;
     border-radius: 3px;
 }
 .category {
     background-color: whitesmoke;
     border-radius: 10px;
     width: 200px;
-    padding: 10px;
     margin: 20px;
-}
-.boxes {
-    display: flex;
-    align-items: center;
-    justify-content: center;
 }
 .logo {
     background-color: white;
+    display: flex;
 }
 .logo img{
-    width: 30%;
+    width: 25%;
+    margin-left: auto;
+    margin-right: auto;
 }
 .screen {
     background-color: #4F4199;
     height: 100vh;
-}
-.info {
-    background-color: white;
 }
 .info button{
     border-radius: 100px;
@@ -78,10 +72,14 @@
     color: white;
     font-size: 24px;
     border: white;
-    margin-right: 90%;
     margin-top: 20px;
+    margin-left: 35%;
 }
 #ques {
     border: solid white 2px;
     border-radius: 30px;
+}
+.team {
+    display: flex;
+    text-align: left;
 }
