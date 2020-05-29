@@ -1,7 +1,6 @@
 import React, {Component} from 'react';
 import history from './../history';
 import {button} from 'react';
-import Container from 'react-bootstrap/Container'
 import "./Home.css"
 import logo from './DawgPack.png'
 import leader from './Leaderboard.PNG'
@@ -12,7 +11,9 @@ export default class Home extends Component {
           <div className="screen">
             <div className="logo">
               <div className="info">
-                <button onClick={() => history.push('/Login')}><div id="ques">?</div></button>
+                <form>
+                <button onClick={() => history.push('/Info')}><div id="ques">?</div></button>
+                </form>
               </div>
             <img src={logo} alt="Dawg Pack Showdown" />
             </div>

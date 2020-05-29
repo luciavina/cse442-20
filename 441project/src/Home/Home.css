@@ -7,7 +7,7 @@
     background-color: #B0A8DC;
     color: #fff;
     border: 2px solid #B0A8DC;
-    width: 110%;
+    width: 35vh;
     border-radius: 0px 10px 10px 0px;
     text-align: right;
 }
@@ -25,16 +25,6 @@
 }
 .container h2 {
     color: white;
-}
-.container p {
-    color: white;
-    font-size: 24px;
-    width: 300px;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: left;
-    padding: 5px;
-    border-radius: 3px;
 }
 .container img {
    height: 50vh;
