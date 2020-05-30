@@ -84,7 +84,7 @@ class CameraTwo2 extends Component {
         ctx.drawImage(img, 0, 0);
 
         if( filter != null){
-            ctx.drawImage(filter, 0, 0, 300, 150);
+            ctx.drawImage(filter, 0, 0, 336, 189);
         } 
         const cheerImage = this.canvas.current.toDataURL("image/jpeg",1);
         this.setState({
@@ -134,44 +134,46 @@ class CameraTwo2 extends Component {
         return (
             <div>
                 <div>
-                <canvas ref={this.canvas} width={1280} height={720} />
+                <canvas ref={this.canvas} width={800} height={450} />
                 <img className="hidden" ref={this.cheer} src={this.state.img_data} alt="" />
                 <img className="hidden" ref={this.filter1} src={filter1} alt="" width={10}/>
                 <img className="hidden" ref={this.filter2} src={filter2} alt="" />
                 <img className="hidden" ref={this.filter3} src={filter3} alt="" />
                 <img className="hidden" ref={this.filter4} src={filter4} alt="" />
-                <div>
-                <span><Button id="filter1" onClick={this.changeFilter}>
-                    <img id="filter11" src={filter1} alt="Home" width={150} />
-                </Button></span>
-                    <span><Button id="filter2" onClick={this.changeFilter}>
-                        <img id="filter22" src={filter2} alt="Home" width={150} />
-                    </Button></span>
-                    <span><Button id="filter3" onClick={this.changeFilter}>
-                        <img id="filter33" src={filter3} alt="Home" width={150} />
-                    </Button></span>
-                    <span><Button id="filter4" onClick={this.changeFilter}>
-                        <img id="filter44" src={filter4} alt="Home" width={150} />
-                    </Button></span>
-                    <span><Button id="none" onClick={this.changeFilter}>No Filter</Button></span>
+                <div id="filtOpt">
+                    <div id="filter"><span><Button id="filter1" onClick={this.changeFilter}>
+                        <img id="filter11" src={filter1} alt="Home"/>
+                    </Button></span></div>
+                    <div id="filter"><span><Button id="filter2" onClick={this.changeFilter}>
+                        <img id="filter22" src={filter2} alt="Home"/>
+                    </Button></span></div>
+                    <div id="filter"><span><Button id="filter3" onClick={this.changeFilter}>
+                        <img id="filter33" src={filter3} alt="Home"/>
+                    </Button></span></div>
+                    <div id="filter"><span><Button id="filter4" onClick={this.changeFilter}>
+                        <img id="filter44" src={filter4} alt="Home"/>
+                    </Button></span></div>
+                    <div id="nofilter"><span><Button id="none" onClick={this.changeFilter}><b>NONE</b></Button></span></div>
+                </div>
                 <div>
                     <Multiselect
                         options={this.state.options}
+                        className="selection"
                         isObject={false}
-                        placeholder='Select Teams'
+                        placeholder='Tap to select teams'
                     />
                 </div>
-                    <label>Would you like to show your cheer on the public display? </label>
+                    <label><p>Would you like to show your cheer on the public display?</p></label>
                     <ToggleButtonGroup type='radio' name='options' defaultValue={0} id="group">
                         <ToggleButton
                             value={0}
                             className="optinbtn">
-                            Yes
+                            YES
                         </ToggleButton>
                         <ToggleButton
                             value={1}
                             className="optinbtn">
-                            No
+                            NO
                         </ToggleButton>
                     </ToggleButtonGroup>
                 </div>
@@ -181,7 +183,6 @@ class CameraTwo2 extends Component {
                     <Button onClick={this.saveImage}>Save</Button>
                     </Link>
                 </div>
-            </div>
         );
     }
 }

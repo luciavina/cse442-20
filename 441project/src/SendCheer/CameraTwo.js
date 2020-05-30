@@ -35,8 +35,8 @@ class CameraTwo extends Component {
     }
     render() {
         const videoConstraints = {
-            width: 1280,
-            height: 720,
+            width: 800,
+            height: 450,
             facingMode: "user"
         };
 
@@ -63,10 +63,10 @@ class CameraTwo extends Component {
                         <div>
                             <Webcam
                                 audio={false}
-                                height={500}
+                                height={450}
                                 ref={this.setRef}
                                 screenshotFormat="image/jpeg"
-                                width={1000}
+                                width={800}
                                 videoConstraints={videoConstraints}
                             />
                             <div className="cam">
