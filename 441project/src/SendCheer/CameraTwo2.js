@@ -93,7 +93,7 @@ class CameraTwo2 extends Component {
         // ctx.drawImage(filters[filter], 50, 50);
         
         if( filter != null){
-            ctx.drawImage(filter, 0, 0);
+            ctx.drawImage(filter, 0, 0, 300, 150);
         } 
         const cheerImage = this.canvas.current.toDataURL("image/jpeg",1);
         this.setState({
@@ -145,7 +145,7 @@ class CameraTwo2 extends Component {
                 <div>
                 <canvas ref={this.canvas} width={1280} height={720} />
                 <img className="hidden" ref={this.cheer} src={this.state.img_data} alt="" />
-                <img className="hidden" ref={this.filter1} src={filter1} alt="" width={100}/>
+                <img className="hidden" ref={this.filter1} src={filter1} alt="" width={10}/>
                 <img className="hidden" ref={this.filter2} src={filter2} alt="" />
                 <img className="hidden" ref={this.filter3} src={filter3} alt="" />
                 <img className="hidden" ref={this.filter4} src={filter4} alt="" />
@@ -159,16 +159,9 @@ class CameraTwo2 extends Component {
                     <img id="filter33" src={filter3} alt="Home" width={150} />
                 </Button></span>
                 <span><Button id="filter4" onClick={this.changeFilter}>
-                    <img id="filter44" src={filter4} alt="Home" width={150} /></Button></span>
+                    <img id="filter44" src={filter4} alt="Home" width={150} />
+                </Button></span>
                 <span><Button id="none" onClick={this.changeFilter}>No Filter</Button></span>
-                    
-                    
-                {(this.state.filter_id !== 0) ?
-                <span><Button id="prev" onClick={this.changeFilter}>Prev Filter</Button></span>
-                    :null}
-                    {(this.state.filter_id !== this.state.max_filters) ?
-                <span><Button id="next" onClick={this.changeFilter}>Next Filter</Button></span>
-                    :null}
                     <Link to={{
                         pathname: '/SendCheer/Sent'
                     }}>
