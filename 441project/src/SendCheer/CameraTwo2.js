@@ -7,8 +7,10 @@ import filter1 from '../stickers/Filter1.png';
 import filter2 from '../stickers/Filter2.png';
 import filter3 from '../stickers/Filter3.png';
 import filter4 from '../stickers/Filter4.png';
-import home from "../Home.PNG";
 import "./camera.css"
+import { Multiselect } from 'multiselect-react-dropdown';
+import ToggleButton from "react-bootstrap/ToggleButton";
+import ToggleButtonGroup from "react-bootstrap/ToggleButtonGroup";
 
 class CameraTwo2 extends Component {
     constructor(props){
@@ -26,8 +28,10 @@ class CameraTwo2 extends Component {
             img_data: '',
             canv_image:'',
             img_id: null,
-            filter_id: 0,
-            max_filters: 2
+            options: ['W. Basketball', 'M.Football', 'M. Soccer', 'W. Beach Volleyball', 
+                "W. Golf", "W. Tennis", 'W. Volley Ball', 'M. Rowing',
+                "W. Gymnastics", "M. Track & Field", "M. Baseball", "W. Soccer", "M. Cross Country", "M. Soccer",
+                "W. Track & Field", "M. Golf", "M. Tennis", "M. Basketball", "W. Rowing", "W. Cross Country", "W. Softball"]
         };
     }
     
@@ -54,23 +58,14 @@ class CameraTwo2 extends Component {
     }
     
     changeFilter= (e) => {
-
+        let filter = null;
         const filter1 = this.filter1.current;
         const filter2 = this.filter2.current;
         const filter3 = this.filter3.current;
         const filter4 = this.filter4.current;
-        //const filters = [sticker, logo];
         const filters = [filter1, filter2, filter3, filter4];
-        //let filter = this.state.filter_id;
         
-        // if(e.target.id === 'prev' && filter !== 0){
-        //     filter = filter - 1;
-        // }else if(filter !== filters.length-1){
-        //     filter = filter + 1;
-        // }
-        
-        let filter = null;
-        console.log(e.target.id)
+
         if(e.target.id ==="filter1" || e.target.id ==="filter11") {
             console.log('fheuwi')
             filter = filter1;
@@ -87,11 +82,7 @@ class CameraTwo2 extends Component {
         ctx.clearRect(0,0,canv.width, canv.height);
         const img = this.cheer.current;
         ctx.drawImage(img, 0, 0);
-        //ctx.font = "40px Courier";
-        //ctx.fillText(`GO TEAeeeeeM!!!${text}`, 210, 75);
-        console.log('filter val ', filter)
-        // ctx.drawImage(filters[filter], 50, 50);
-        
+
         if( filter != null){
             ctx.drawImage(filter, 0, 0, 300, 150);
         } 
@@ -149,19 +140,41 @@ class CameraTwo2 extends Component {
                 <img className="hidden" ref={this.filter2} src={filter2} alt="" />
                 <img className="hidden" ref={this.filter3} src={filter3} alt="" />
                 <img className="hidden" ref={this.filter4} src={filter4} alt="" />
+                <div>
                 <span><Button id="filter1" onClick={this.changeFilter}>
                     <img id="filter11" src={filter1} alt="Home" width={150} />
                 </Button></span>
-                <span><Button id="filter2" onClick={this.changeFilter}>
-                    <img id="filter22" src={filter2} alt="Home" width={150} />
-                </Button></span>
-                <span><Button id="filter3" onClick={this.changeFilter}>
-                    <img id="filter33" src={filter3} alt="Home" width={150} />
-                </Button></span>
-                <span><Button id="filter4" onClick={this.changeFilter}>
-                    <img id="filter44" src={filter4} alt="Home" width={150} />
-                </Button></span>
-                <span><Button id="none" onClick={this.changeFilter}>No Filter</Button></span>
+                    <span><Button id="filter2" onClick={this.changeFilter}>
+                        <img id="filter22" src={filter2} alt="Home" width={150} />
+                    </Button></span>
+                    <span><Button id="filter3" onClick={this.changeFilter}>
+                        <img id="filter33" src={filter3} alt="Home" width={150} />
+                    </Button></span>
+                    <span><Button id="filter4" onClick={this.changeFilter}>
+                        <img id="filter44" src={filter4} alt="Home" width={150} />
+                    </Button></span>
+                    <span><Button id="none" onClick={this.changeFilter}>No Filter</Button></span>
+                <div>
+                    <Multiselect
+                        options={this.state.options}
+                        isObject={false}
+                        placeholder='Select Teams'
+                    />
+                </div>
+                    <label>Would you like to show your cheer on the public display? </label>
+                    <ToggleButtonGroup type='radio' name='options' defaultValue={0} id="group">
+                        <ToggleButton
+                            value={0}
+                            className="optinbtn">
+                            Yes
+                        </ToggleButton>
+                        <ToggleButton
+                            value={1}
+                            className="optinbtn">
+                            No
+                        </ToggleButton>
+                    </ToggleButtonGroup>
+                </div>
                     <Link to={{
                         pathname: '/SendCheer/Sent'
                     }}>
