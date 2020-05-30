@@ -2,37 +2,78 @@
     display: none;
     width: 20vw;
 }
+.image {
+    display: flex;
+}
 #filter Button, #nofilter Button {
-    height: 90px;
+    height: 75px;
     background-color: whitesmoke;
     border: solid 3.5px gray;
     color: black;
-    margin-right: 10px;
-    margin-left: 10px;
+    margin-top: 9px;
+    margin-bottom: 9px;
     padding: 0px;
 }
 #nofilter Button {
-    width: 140px;
+    width: 135px;
 }
 #filter img {
-    width: 130px;
+    width: 125px;
 }
 #filtOpt {
-    display: flex;
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
+    padding-bottom: 1vh;
+    margin-left: 10px;
 }
-.optinbtn {
+.optinbtn, .optinbtn:hover {
     background-color: gray;
     border: none;
-    margin: 3px
-}
-label {
-    font-size: 20px;
+    margin-right: 5px;
+    height: 35px;
 }
 #multiselectContainerReact {
-    width: 800px;
-    margin-right: auto;
-    margin-left: auto;
+    width: 520px;
 }
+#search_input {
+    height: 30px;
+}
+.contents {
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+}
+.contents p {
+    text-align: left;
+    margin-right: 20px;
+}
+.contents h6 {
+    text-align: center;
+    font-family: "Century Gothic";
+}
+.display {
+    display: flex;
+    margin-bottom: 14px;
+}
+._7ahQImyV4dj0EpcNOjnwA, .lhyQmCtWOINviMz0WG_gr {
+    background: #4F4199 !important;
+}
+.outer Button, .outer Button:hover{
+    position:absolute;
+    height: 40px;
+    font-size: 18px;
+    padding: 0px;
+    width: 40px;
+    margin: 10px;
+    border-radius: 30px;
+    background-color: rgba(0, 0, 0, 0.53);
+}
+.outer {
+    width: 600px;
+    text-align: right;
+    background-color: purple;
+    margin-left: auto;
+    margin-right: auto;
+}
+

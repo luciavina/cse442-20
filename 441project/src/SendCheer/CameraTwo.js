@@ -35,8 +35,8 @@ class CameraTwo extends Component {
     }
     render() {
         const videoConstraints = {
-            width: 800,
-            height: 450,
+            width: 880,
+            height: 495,
             facingMode: "user"
         };
 
@@ -56,17 +56,17 @@ class CameraTwo extends Component {
                     <br/>
                     {this.state.img_data ?
                         <div>
+                            <div className="outer"><Button onClick={this.retake}><h4>x</h4></Button></div>
                             <CameraTwo2 img_data={this.state.img_data} img_id={this.state.img_id}/>
-                            <Button onClick={this.retake}>Back</Button>
                         </div>
                         :
                         <div>
                             <Webcam
                                 audio={false}
-                                height={450}
+                                height={495}
                                 ref={this.setRef}
                                 screenshotFormat="image/jpeg"
-                                width={800}
+                                width={880}
                                 videoConstraints={videoConstraints}
                             />
                             <div className="cam">

@@ -28,7 +28,7 @@ class CameraTwo2 extends Component {
             img_data: '',
             canv_image:'',
             img_id: null,
-            options: ['W. Basketball', 'M.Football', 'M. Soccer', 'W. Beach Volleyball', 
+            options: ['W. Basketball', 'M. Football', 'M. Soccer', 'W. Beach Volleyball',
                 "W. Golf", "W. Tennis", 'W. Volley Ball', 'M. Rowing',
                 "W. Gymnastics", "M. Track & Field", "M. Baseball", "W. Soccer", "M. Cross Country", "M. Soccer",
                 "W. Track & Field", "M. Golf", "M. Tennis", "M. Basketball", "W. Rowing", "W. Cross Country", "W. Softball"]
@@ -133,29 +133,35 @@ class CameraTwo2 extends Component {
 
         return (
             <div>
-                <div>
-                <canvas ref={this.canvas} width={800} height={450} />
-                <img className="hidden" ref={this.cheer} src={this.state.img_data} alt="" />
-                <img className="hidden" ref={this.filter1} src={filter1} alt="" width={10}/>
-                <img className="hidden" ref={this.filter2} src={filter2} alt="" />
-                <img className="hidden" ref={this.filter3} src={filter3} alt="" />
-                <img className="hidden" ref={this.filter4} src={filter4} alt="" />
-                <div id="filtOpt">
-                    <div id="filter"><span><Button id="filter1" onClick={this.changeFilter}>
-                        <img id="filter11" src={filter1} alt="Home"/>
-                    </Button></span></div>
-                    <div id="filter"><span><Button id="filter2" onClick={this.changeFilter}>
-                        <img id="filter22" src={filter2} alt="Home"/>
-                    </Button></span></div>
-                    <div id="filter"><span><Button id="filter3" onClick={this.changeFilter}>
-                        <img id="filter33" src={filter3} alt="Home"/>
-                    </Button></span></div>
-                    <div id="filter"><span><Button id="filter4" onClick={this.changeFilter}>
-                        <img id="filter44" src={filter4} alt="Home"/>
-                    </Button></span></div>
-                    <div id="nofilter"><span><Button id="none" onClick={this.changeFilter}><b>NONE</b></Button></span></div>
+                <div className="contents">
+                    <div className="image">
+                        <div><canvas ref={this.canvas} width={880} height={495} /></div>
+                        <img className="hidden" ref={this.cheer} src={this.state.img_data} alt="" />
+                        <img className="hidden" ref={this.filter1} src={filter1} alt="" width={10}/>
+                        <img className="hidden" ref={this.filter2} src={filter2} alt="" />
+                        <img className="hidden" ref={this.filter3} src={filter3} alt="" />
+                        <img className="hidden" ref={this.filter4} src={filter4} alt="" />
+                        <div id="filtOpt">
+                            <h6>Choose a filter:</h6>
+                            <div id="filter"><span><Button id="filter1" onClick={this.changeFilter}>
+                                <img id="filter11" src={filter1} alt="Home"/>
+                            </Button></span></div>
+                            <div id="filter"><span><Button id="filter2" onClick={this.changeFilter}>
+                                <img id="filter22" src={filter2} alt="Home"/>
+                            </Button></span></div>
+                            <div id="filter"><span><Button id="filter3" onClick={this.changeFilter}>
+                                <img id="filter33" src={filter3} alt="Home"/>
+                            </Button></span></div>
+                            <div id="filter"><span><Button id="filter4" onClick={this.changeFilter}>
+                                <img id="filter44" src={filter4} alt="Home"/>
+                            </Button></span></div>
+                            <div id="nofilter"><span><Button id="none" onClick={this.changeFilter}>
+                                <h3>NONE</h3>
+                            </Button></span></div>
+                        </div>
                 </div>
-                <div>
+                <div className="display">
+                    <p>Pick which teams to send your cheer to:</p>
                     <Multiselect
                         options={this.state.options}
                         className="selection"
@@ -163,8 +169,9 @@ class CameraTwo2 extends Component {
                         placeholder='Tap to select teams'
                     />
                 </div>
-                    <label><p>Would you like to show your cheer on the public display?</p></label>
-                    <ToggleButtonGroup type='radio' name='options' defaultValue={0} id="group">
+                    <div className="display">
+                    <p>Would you like to show your cheer on the public display?</p>
+                    <ToggleButtonGroup type='radio' name='options' defaultValue={0} id="opt">
                         <ToggleButton
                             value={0}
                             className="optinbtn">
@@ -176,12 +183,15 @@ class CameraTwo2 extends Component {
                             NO
                         </ToggleButton>
                     </ToggleButtonGroup>
+                    </div>
                 </div>
+                <div className="inner">
                     <Link to={{
                         pathname: '/SendCheer/Sent'
                     }}>
-                    <Button onClick={this.saveImage}>Save</Button>
+                    <Button onClick={this.saveImage}>Send</Button>
                     </Link>
+                </div>
                 </div>
         );
     }
