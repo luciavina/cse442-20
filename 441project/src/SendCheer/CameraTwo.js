@@ -28,11 +28,15 @@ class CameraTwo extends Component {
             img_data: imageSrc
         });
     };
-    
+    retake = () => {
+        this.setState({
+            img_data: null
+        })
+    }
     render() {
         const videoConstraints = {
-            width: 1280,
-            height: 720,
+            width: 880,
+            height: 495,
             facingMode: "user"
         };
 
@@ -51,40 +55,29 @@ class CameraTwo extends Component {
                     </div>
                     <br/>
                     {this.state.img_data ?
-                    <div>
-                        <CameraTwo2 img_data={this.state.img_data} img_id={this.state.img_id} />
-                    </div>
-                    :
-                    <div>
-                        <Webcam
-                            audio={false}
-                            height={500}
-                            ref={this.setRef}
-                            screenshotFormat="image/jpeg"
-                            width={1000}
-                            videoConstraints={videoConstraints}
-                        />
-                        <div className="cam">
-                            <Button onClick={this.capture}> </Button>
+                        <div>
+                            <div className="outer"><Button onClick={this.retake}><h4>x</h4></Button></div>
+                            <CameraTwo2 img_data={this.state.img_data} img_id={this.state.img_id}/>
                         </div>
-                    </div>}
-                    <Link to={{pathname: '/SendCheer'}}>
-                        <br/>
-                        <Button>Back</Button>
-                    </Link>
-                    {this.state.img_data ?
-                        <Link to={{
-                            pathname: "/SendCheer/Edit",
-                            state: {
-                                img_data: this.state.img_data,
-                                img_id: this.state.img_id
-                            }
-                        }}>
-                            <Button>Next</Button>
-                        </Link>
-                        :null
+                        :
+                        <div>
+                            <Webcam
+                                audio={false}
+                                height={495}
+                                ref={this.setRef}
+                                screenshotFormat="image/jpeg"
+                                width={880}
+                                videoConstraints={videoConstraints}
+                            />
+                            <div className="cam">
+                                <Button onClick={this.capture}> </Button>
+                            </div>
+                            <Link to={{pathname: '/SendCheer'}}>
+                                <br/>
+                                <Button>Back</Button>
+                            </Link>
+                        </div>
                     }
-
                 </div>
             </div>
         );
