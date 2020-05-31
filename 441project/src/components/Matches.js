@@ -17,7 +17,7 @@ class Matches extends Component {
 }
 
 Matches.propTypes = {
-    matches: PropTypes.array.isRequired,
+    matches: PropTypes.array.isRequired
 }
 
 export default Matches;

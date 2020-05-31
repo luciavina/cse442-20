@@ -17,8 +17,10 @@
     "react-image-file-resizer": "^0.2.3",
     "react-konva": "^16.13.0-3",
     "react-native-stickers": "0.0.2",
+    "react-responsive-carousel": "^3.2.7",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.4.1",
+    "react-slideshow-image": "^1.5.2",
     "react-webcam": "^5.0.1"
   },
   "scripts": {

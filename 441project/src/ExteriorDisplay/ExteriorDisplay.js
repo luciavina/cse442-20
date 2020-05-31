@@ -6,7 +6,6 @@ import 'firebase/storage';
 import Slideshow from "./Slideshow";
 
 export default class ExteriorDisplay extends Component {
-  //TODO: Make it so you can add to the array of state
   constructor(props) {
     super(props);
     this.state = {
@@ -23,12 +22,9 @@ export default class ExteriorDisplay extends Component {
       result.items.forEach((imageRef) => {
 
         imageRef.getDownloadURL().then((url) => {
-          this.setState({imageUrls: this.state.imageUrls.concat(url)})
-          console.log(url);
+          this.setState({imageUrls: this.state.imageUrls.concat(url)});
         })
       });
-
-      console.log(this.state.imageUrls);
     }).catch((error) => {
       console.log(error);
     });
@@ -37,7 +33,7 @@ export default class ExteriorDisplay extends Component {
   render () {
     return (
         <div>
-          <Slideshow imageURL={this.state.imageUrls}/>
+          <Slideshow imageUrls={this.state.imageUrls}/>
         </div>
     );
   }
