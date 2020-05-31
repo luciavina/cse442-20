@@ -4,14 +4,17 @@ import { Carousel } from 'react-responsive-carousel';
 import PropTypes from "prop-types";
 
 export default class Slideshow extends Component {
+
   render() {
+    if (this.props.imageUrls.length < 1) return  <div> Images not fetched! </div>
+
     return (
-        <Carousel autoPlay={true} showArrows={false} showThumbs={false}>
-          {this.props.imageUrls.map((image) => (
-              <div>
-                return <img src= {image} height='1000' width='1000'/>
-              </div>
-          ))}
+        <Carousel autoPlay={true} showThumbs={false} infiniteLoop={true} interval={3500}>
+              {this.props.imageUrls.map((image) => (
+                <div>
+                  return <img src= {image} height='720' width='1280'/>
+                </div>
+            ))}
         </Carousel>
     );
   }
