@@ -4,6 +4,7 @@ import 'firebase/firestore';
 import 'firebase/auth';
 import 'firebase/storage';
 import Slideshow from "./Slideshow";
+import logo from "../stickers/Filter2.png"
 
 export default class ExteriorDisplay extends Component {
   constructor(props) {
@@ -32,8 +33,17 @@ export default class ExteriorDisplay extends Component {
 
   render () {
     return (
-        <div>
-          <Slideshow imageUrls={this.state.imageUrls}/>
+        <div className="displayCheer">
+          <img src={logo} alt="logo"/>
+          <div className="slide">
+            <Slideshow imageUrls={this.state.imageUrls}/>
+          </div>
+          <div className="slide">
+            <Slideshow imageUrls={this.state.imageUrls}/>
+          </div>
+          <div className="slide">
+            <Slideshow imageUrls={this.state.imageUrls}/>
+          </div>
         </div>
     );
   }

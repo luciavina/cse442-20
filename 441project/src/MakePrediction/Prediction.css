@@ -140,3 +140,18 @@ h2, h3, p {
 .teams p {
     font-size: 1.7vh;
 }
+.slide {
+    width: 640px;
+    padding-bottom: 3px;
+}
+.displayCheer img {
+    width: 230px;
+}
+.displayCheer {
+    background-color: #4F4199;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 10px;
+    height: 100vh;
+}

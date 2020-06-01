@@ -19,9 +19,7 @@ export default class CheerSent extends Component {
                 </div>
               <br/>
               <div className="teams">
-                <h1>Your cheer was sent to:</h1>
-                <p>M. Basketball</p>
-                <p>W. Soccer</p>
+                <h1>Your cheer was sent to your teams</h1>
               </div>
                 <h4>Your cheer will be displayed on the external screens!</h4>
               <div className="sent">
