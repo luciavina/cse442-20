@@ -39,7 +39,7 @@ class CameraTwo extends Component {
         this.myInterval = setInterval(() => {
             const {seconds} = this.state;
 
-            if (seconds > 0) {
+            if (seconds > 1) {
                 this.setState(({seconds}) => ({seconds: seconds - 1}))
             } else {
                 this.capture();
