@@ -12,7 +12,7 @@ export default class Slideshow extends Component {
         <Carousel autoPlay={true} showThumbs={false} infiniteLoop={true} interval={3500}>
               {this.props.imageUrls.map((image) => (
                 <div>
-                  return <img src= {image} height='360' width='640'/>
+                  <img src= {image} height='360' width='640'/>
                 </div>
             ))}
         </Carousel>

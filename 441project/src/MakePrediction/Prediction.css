@@ -150,10 +150,10 @@ h2, h3, p {
 }
 .slide {
     width: 640px;
-    padding-bottom: 5px;
+    border: solid 3px #4F4199;
 }
 .displayCheer img {
-    width: 230px;
+    width: 210px;
 }
 .displayCheer {
     background-color: #4F4199;
@@ -162,6 +162,10 @@ h2, h3, p {
     margin-right: auto;
     padding: 10px;
     height: 1335px;
+}
+.displayCheer p {
+    color: white;
+    font-size: 28px;
 }
 .header input {
     padding: 10px;

@@ -24,7 +24,7 @@ export default class Info extends Component {
           <div className="infoHead">
             <br/>
             <p>Dawg Pack Showdown is a 10 week fitness based competition where UW athletic teams face off against one another to earn points and climb up the leaderboard!</p>
-            <p>Your job is to support your favorite teams to do their best!</p>
+            <p>Your job is to support your favorite teams!</p>
           </div>
           <br/>
           <p><b>WHAT CAN YOU DO?</b></p>
@@ -49,7 +49,7 @@ export default class Info extends Component {
             </div>
             <div className="boxes">
               <h3>View Results</h3>
-              <p>Want to know how your favorite teams are doing in their weekly challenges?</p><p>Check back every Monday at 8am to see updated the weekly challenge results.</p><p>Did you make your predictions last week? Check out who won!</p><p>Go see all the fun challenges that are coming up in the future!</p>
+              <p>Want to know how your favorite teams are doing in their weekly challenges?</p><p>Check back every Monday at 8am to see the updated weekly challenge results.</p><p>Did you make your predictions last week? Check out who won!</p><p>Go see all the fun challenges that are coming up in the future!</p>
               <Link to={{
                 pathname: '/Results'
               }}>
