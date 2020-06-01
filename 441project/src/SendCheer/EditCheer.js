@@ -206,6 +206,7 @@ class EditCheer extends Component {
                     </div>
                 </div>
                 <div className="inner">
+                    {this.state.chosen_teams?
                     <Link to={{
                         pathname: '/SendCheer/Sent',
                         state: {
@@ -215,6 +216,11 @@ class EditCheer extends Component {
                     }}>
                         {this.state.opt ? <Button onClick={this.saveImage}>Send</Button> : <Button>Send</Button>}
                     </Link>
+                    : <div>
+                          <Button>Send</Button>
+                          <p>*Must select at least one team</p>
+                      </div>
+                    }
                 </div>
                 </div>
         );

@@ -1,8 +1,9 @@
+@import url('https://fonts.googleapis.com/css?family=Didact+Gothic');
 .nav button, .nav button:hover {
     padding: 1.2vh;
     padding-right: 1vw;
     font-size: 2.2vh;
-    font-family: "Century Gothic";
+    font-family: 'Century Gothic','Futura','Didact Gothic',san-serif;;
     margin-bottom: 2vh;
     background-color: #B0A8DC;
     color: #fff;

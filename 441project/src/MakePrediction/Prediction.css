@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Didact+Gothic');
 .controlbutton Button, .controlbutton Button:hover {
     margin: 4px;
     font-size: 2.6vh;
@@ -26,7 +27,7 @@ input {
     width: 300px;
 }
 h2, h3, p {
-    font-family: "Century Gothic";
+    font-family: 'Century Gothic','Futura','Didact Gothic',san-serif;;
 }
 .predInfo {
     background-color: #F5F3FF;
@@ -35,12 +36,12 @@ h2, h3, p {
     height: 30vh;
 }
 .predInfo p {
-    font-family: "Century Gothic";
+    font-family: 'Century Gothic','Futura','Didact Gothic',san-serif;;
     font-size: 2.5vh;
     text-align: center;
 }
 .predInfo h6 {
-    font-family: "Century Gothic";
+    font-family: 'Century Gothic','Futura','Didact Gothic',san-serif;;
     font-size: 2vh;
     text-align: center;
 }
@@ -96,7 +97,7 @@ h2, h3, p {
     background-color: darkred;
 }
 .infoPage p {
-    font-family: "Century Gothic";
+    font-family: 'Century Gothic','Futura','Didact Gothic',san-serif;;
     font-size: 2.5vh;
     text-align: center;
     width: 55vw;
@@ -135,7 +136,7 @@ h2, h3, p {
 .boxes Button, .boxes Button:hover {
     background-color: #bfb6ff;
     border: 2px solid #bfb6ff;
-    font-family: "Century Gothic";
+    font-family: 'Century Gothic','Futura','Didact Gothic',san-serif;;
     font-size: 2vh;
 }
 .boxes h6 {

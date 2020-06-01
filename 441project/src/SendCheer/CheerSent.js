@@ -34,10 +34,10 @@ export default class CheerSent extends Component {
                 </div>
               <br/>
               <div className="teams">
-                <h1>Your cheer was sent to your teams</h1>
+                <h1>Your cheer was sent to your teams:</h1>
                   {this.state.teams.map((team) => (
-                      <div className="teams">
-                         <p> {team} </p>
+                      <div>
+                         <p>{team}</p>
                       </div>
                   ))}
 
@@ -47,7 +47,7 @@ export default class CheerSent extends Component {
               : <h4>Your cheer <b>will not</b> be displayed on the external screens!</h4>}
 
               <div className="sent">
-                <img src="https://i.pinimg.com/originals/b5/0a/a2/b50aa2af9e269b0c520d383cad0e3aae.gif" alt="Go Huskies!" height="400"/>
+                <img src="https://i.pinimg.com/originals/b5/0a/a2/b50aa2af9e269b0c520d383cad0e3aae.gif" alt="Go Huskies!" height="100"/>
               </div>
               <div className="controlbutton">
                 <Link to={{

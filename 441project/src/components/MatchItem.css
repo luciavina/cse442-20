@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css?family=Didact+Gothic');
 .predictbtn {
     padding: 5px;
     font-size: 1.5vh;
@@ -7,7 +8,7 @@
     width: 15vw;
     border-radius: 5px;
     height: 3.5vh;
-    font-family: "Century Gothic";
+    font-family: 'Century Gothic','Futura','Didact Gothic',san-serif;;
 }
 .predictbtn:hover {
     background-color: #ABABAB;
@@ -30,5 +31,5 @@
 .space p{
     margin-top: 8px;
     color: black;
-    font-family: "Century Gothic";
+    font-family: 'Century Gothic','Futura','Didact Gothic',san-serif;;
 }
