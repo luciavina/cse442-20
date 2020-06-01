@@ -18,6 +18,7 @@ export default class CheerSent extends Component {
   }
 
     render(){
+      console.log(this.state.teams)
         return(
             <div>
                 <div className="home">

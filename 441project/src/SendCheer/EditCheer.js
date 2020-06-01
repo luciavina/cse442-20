@@ -32,7 +32,8 @@ class EditCheer extends Component {
             options: ['W. Basketball', 'M. Football', 'M. Soccer', 'W. Beach Volleyball',
                 "W. Golf", "W. Tennis", 'W. Volley Ball', 'M. Rowing',
                 "W. Gymnastics", "M. Track & Field", "M. Baseball", "W. Soccer", "M. Cross Country", "M. Soccer",
-                "W. Track & Field", "M. Golf", "M. Tennis", "M. Basketball", "W. Rowing", "W. Cross Country", "W. Softball"]
+                "W. Track & Field", "M. Golf", "M. Tennis", "M. Basketball", "W. Rowing", "W. Cross Country", "W. Softball"],
+            chosen_teams: null
         };
     }
     
@@ -130,6 +131,18 @@ class EditCheer extends Component {
             }
         );
     }
+    
+    onSelect = (selectedList, selectedItem) => {
+        this.setState({
+            chosen_teams: selectedList
+        });
+    }
+    
+    onRemove = (selectedList, selectedItem) => {
+        this.setState({
+            chosen_teams: selectedList
+        });
+    }
     render(){
 
         return (
@@ -169,6 +182,9 @@ class EditCheer extends Component {
                         ref={this.multiSelect}
                         isObject={false}
                         placeholder='Tap to select teams'
+                        selectedValues={this.state.selectedValue}
+                        onSelect={this.onSelect}
+                        onRemove={this.onRemove}
                     />
                 </div>
                     <div className="display">
@@ -193,7 +209,8 @@ class EditCheer extends Component {
                     <Link to={{
                         pathname: '/SendCheer/Sent',
                         state: {
-                            opt: this.state.opt
+                            opt: this.state.opt,
+                            teams: this.state.chosen_teams
                         }
                     }}>
                         {this.state.opt ? <Button onClick={this.saveImage}>Send</Button> : <Button>Send</Button>}
