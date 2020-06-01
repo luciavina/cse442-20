@@ -35,7 +35,7 @@ export default class CheerSent extends Component {
                 <h1>Your cheer was sent to your teams</h1>
               </div>
               {this.state.opt ?
-                <h4>Your cheer <b>will</b> be displayed on the external screens!</h4>
+                <h4>Your cheer <b>will</b> be displayed on the exterior screens!</h4>
               : <h4>Your cheer <b>will not</b> be displayed on the external screens!</h4>}
 
               <div className="sent">

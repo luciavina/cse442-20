@@ -36,7 +36,7 @@ class SendCheer extends Component {
           <br/>
           <div>
             <h1>Step 4:</h1>
-            <h2>View your cheer on outside displays of the booth!</h2>
+            <h2>View your cheer on the exterior displays of the booth!</h2>
           </div>
           </div>
           <div className="controlbutton">
