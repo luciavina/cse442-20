@@ -9,7 +9,7 @@ class MatchItem extends Component {
 
     render() {
         const {id, teams} = this.props.match;
-        const conf = this.props.conf; //boolean true if at Confrim page. 
+        const conf = this.props.conf; //boolean true if at Confirm page.
         //let defVal = 'none';
         if (conf) {
             //defVal = teams[0].selected ? 0 : 1;

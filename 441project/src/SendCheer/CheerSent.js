@@ -4,6 +4,19 @@ import Button from "react-bootstrap/Button";
 import home from "../Home.PNG";
 
 export default class CheerSent extends Component {
+  state  = {
+    opt: true,
+    teams: []
+  }
+
+  componentDidMount() {
+    const { opt, teams } = this.props.location.state;
+    this.setState({
+      opt: opt,
+      teams: teams
+    });
+  }
+
     render(){
         return(
             <div>
@@ -21,7 +34,10 @@ export default class CheerSent extends Component {
               <div className="teams">
                 <h1>Your cheer was sent to your teams</h1>
               </div>
-                <h4>Your cheer will be displayed on the external screens!</h4>
+              {this.state.opt ?
+                <h4>Your cheer <b>will</b> be displayed on the external screens!</h4>
+              : <h4>Your cheer <b>will not</b> be displayed on the external screens!</h4>}
+
               <div className="sent">
                 <img src="https://i.pinimg.com/originals/b5/0a/a2/b50aa2af9e269b0c520d383cad0e3aae.gif" alt="Go Huskies!" height="400"/>
               </div>

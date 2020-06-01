@@ -28,6 +28,7 @@ class CameraTwo2 extends Component {
             img_data: '',
             canv_image:'',
             img_id: null,
+            opt: true,
             options: ['W. Basketball', 'M. Football', 'M. Soccer', 'W. Beach Volleyball',
                 "W. Golf", "W. Tennis", 'W. Volley Ball', 'M. Rowing',
                 "W. Gymnastics", "M. Track & Field", "M. Baseball", "W. Soccer", "M. Cross Country", "M. Soccer",
@@ -165,6 +166,7 @@ class CameraTwo2 extends Component {
                     <Multiselect
                         options={this.state.options}
                         className="selection"
+                        ref={this.multiSelect}
                         isObject={false}
                         placeholder='Tap to select teams'
                     />
@@ -174,11 +176,13 @@ class CameraTwo2 extends Component {
                     <ToggleButtonGroup type='radio' name='options' defaultValue={0} id="opt">
                         <ToggleButton
                             value={0}
+                            onChange={() => {this.setState({opt : true} )}}
                             className="optinbtn">
                             YES
                         </ToggleButton>
                         <ToggleButton
                             value={1}
+                            onChange={() => {this.setState({opt : false} )}}
                             className="optinbtn">
                             NO
                         </ToggleButton>
@@ -187,9 +191,12 @@ class CameraTwo2 extends Component {
                 </div>
                 <div className="inner">
                     <Link to={{
-                        pathname: '/SendCheer/Sent'
+                        pathname: '/SendCheer/Sent',
+                        state: {
+                            opt: this.state.opt
+                        }
                     }}>
-                    <Button onClick={this.saveImage}>Send</Button>
+                        {this.state.opt ? <Button onClick={this.saveImage}>Send</Button> : <Button>Send</Button>}
                     </Link>
                 </div>
                 </div>

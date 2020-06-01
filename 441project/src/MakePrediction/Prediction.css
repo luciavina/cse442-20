@@ -1,8 +1,8 @@
 .controlbutton Button, .controlbutton Button:hover {
     margin: 4px;
     font-size: 2.6vh;
-    background-color: #bfb6ff;
-    border: #bfb6ff;
+    background-color: #B0A8DC;
+    border: #B0A8DC;
     padding: 1vh;
     border-radius: 0.7vh;
 }
@@ -142,7 +142,7 @@ h2, h3, p {
 }
 .slide {
     width: 640px;
-    padding-bottom: 3px;
+    padding-bottom: 5px;
 }
 .displayCheer img {
     width: 230px;
@@ -153,5 +153,5 @@ h2, h3, p {
     margin-left: auto;
     margin-right: auto;
     padding: 10px;
-    height: 100vh;
+    height: 1335px;
 }
