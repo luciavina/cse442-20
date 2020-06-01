@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import {Link} from "react-router-dom";
 import Button from "react-bootstrap/Button";
 import home from "../Home.PNG";
+import {Carousel} from "react-responsive-carousel";
 
 export default class CheerSent extends Component {
   state  = {
@@ -34,6 +35,12 @@ export default class CheerSent extends Component {
               <br/>
               <div className="teams">
                 <h1>Your cheer was sent to your teams</h1>
+                  {this.state.teams.map((team) => (
+                      <div className="teams">
+                         <p> {team} </p>
+                      </div>
+                  ))}
+
               </div>
               {this.state.opt ?
                 <h4>Your cheer <b>will</b> be displayed on the exterior screens!</h4>
