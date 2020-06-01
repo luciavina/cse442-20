@@ -11,6 +11,7 @@ class CameraTwo extends Component {
     constructor(props){
         super(props);
         this.state = {
+            seconds: 3,
             img_id: 0,
             img_data: null
         }
@@ -33,7 +34,23 @@ class CameraTwo extends Component {
             img_data: null
         })
     }
+
+    countDown = () => {
+        this.myInterval = setInterval(() => {
+            const {seconds} = this.state;
+
+            if (seconds > 0) {
+                this.setState(({seconds}) => ({seconds: seconds - 1}))
+            } else {
+                this.capture();
+                clearInterval(this.myInterval);
+                this.setState({seconds: 3})
+            }
+        }, 1000)
+    }
+
     render() {
+        const { seconds } = this.state
         const videoConstraints = {
             width: 880,
             height: 495,
@@ -70,7 +87,7 @@ class CameraTwo extends Component {
                                 videoConstraints={videoConstraints}
                             />
                             <div className="cam">
-                                <Button onClick={this.capture}> </Button>
+                                <Button onClick={this.countDown}>{this.state.seconds}</Button>
                             </div>
                             <Link to={{pathname: '/SendCheer'}}>
                                 <br/>

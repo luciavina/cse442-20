@@ -82,6 +82,8 @@ h2, h3, p {
     border-radius: 30px;
     border: solid lightgrey 6px;
     background-color: darkgray;
+    font-size: 22px;
+    padding: 0px;
 }
 .btn-primary:not(:disabled):not(.disabled):active, .btn-primary:not(:disabled):not(.disabled).active, .show > .btn-primary.dropdown-toggle {
     color: #fff;
