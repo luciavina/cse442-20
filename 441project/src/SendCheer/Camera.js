@@ -3,174 +3,102 @@ import Webcam from "react-webcam";
 import Button from "react-bootstrap/Button";
 import {Link} from "react-router-dom";
 import "../MakePrediction/Prediction.css";
-import storage from '../base';
-import emoji from '../stickers/emoji.png';
-import smileyface from '../stickers/smileyface.png';
 import home from "../Home.PNG";
-import {Image, Layer, Stage} from "react-konva";
-// import { StickerPicker } from 'react-native-stickers';
-// import { styles, View, Text } from "react-native";
+import EditCheer from "./EditCheer"
 
 class Camera extends Component {
 
     constructor(props){
-      super(props);
-      this.state = {
+        super(props);
+        this.state = {
+            seconds: 3,
             img_id: 0,
-            img_data: null,
-            progress: 0,
-            saveImage: false,
-            sticker_id: null
-          }
+            img_data: null
+        }
     }
 
     setRef = (webcam) => {
         this.webcam = webcam;
-      }
-
-    setCanvasRef = (canvas) => {
-        this.canvas = canvas;
     }
-  
+
     capture = () => {
-      const imageSrc = this.webcam.getScreenshot();
-      const imageSrcShort = this.webcam.getScreenshot().substring(23, imageSrc.length);
-      // const WebCamImage = () => {
-      //       const [image] = useImage(imageSrc);
-      //       return <Image image={image} />;
-      //   };
-      // const thisImage = WebCamImage();
-      this.setState({
-        img_id: Date.now(),
-        img_data: imageSrc,
-          //img_konva: thisImage
-      });
-      const canvas = this.canvas;
-      this.makePic(canvas);
-
-
-    };
-    
-    saveImage = () => {
-
-        const image = this.state.img_data.substring(23, this.state.img_data.length);
-        const uploadTask = storage.ref(`images/${this.state.img_id}`).putString(image, 'base64');
-        uploadTask.on(
-            "state_changed",
-            snapshot => {
-                // progress function ...
-                const progress = Math.round(
-                    (snapshot.bytesTransferred / snapshot.totalBytes) * 100
-                );
-                this.setState({ progress });
-            },
-            error => {
-                // Error function ...
-                console.log(error);
-            },
-            () => {
-                // complete function ...
-                storage
-                    .ref("images")
-                    .child(this.state.img_id.toString())
-                    .getDownloadURL()
-                    .then(url => {
-                        this.setState({ url });
-                    });
-            }
-        );
-    }
-    
-    retake = (e) => {
-      e.persist();
-      this.setState({
-        img_id: null,
-        img_data: null
-      })
-    }
-    
-    selectSticker = (e) => {
+        const imageSrc = this.webcam.getScreenshot();
+        const imageSrcShort = this.webcam.getScreenshot().substring(23, imageSrc.length);
         this.setState({
-            sticker_id: e.target.id
+            img_id: Date.now(),
+            img_data: imageSrc
         });
-    }
-    
-    placeSticker = (e) => {
-        console.log(e.target);
-    }
-    
-    makePic = (canvas) => {
-        // console.log("hello");
-        // const ctx = canvas.getContext("2d");
-        // const img = new Image();
-        // img.src = this.state.img_data;
-        // console.log('fjdksljf')
-        // img.onload = () => {
-        //     ctx.drawImage(img, 0, 0, 1280, 720);
-        // };
-    }
-    
-    stageClick = (e) => {
-        console.log("stage click")
-    
+    };
+    retake = () => {
+        this.setState({
+            img_data: null
+        })
     }
 
+    countDown = () => {
+        this.myInterval = setInterval(() => {
+            const {seconds} = this.state;
+
+            if (seconds > 1) {
+                this.setState(({seconds}) => ({seconds: seconds - 1}))
+            } else {
+                this.capture();
+                clearInterval(this.myInterval);
+                this.setState({seconds: 3})
+            }
+        }, 1000)
+    }
 
     render() {
-      const videoConstraints = {
-        width: 1280,
-        height: 720,
-        facingMode: "user"
-      };
+        const { seconds } = this.state
+        const videoConstraints = {
+            width: 880,
+            height: 495,
+            facingMode: "user"
+        };
 
-    return (
-      <div>
-      <div className="home">
-        <Link to={{
-          pathname: '/'
-        }}>
-          <Button><img src={home} alt="Home" /></Button>
-        </Link>
-      </div>
-        <div className="controlbutton">
-          <div className="top">
-            <h1>Send a Cheer</h1>
-          </div>
-          <br/>
-          {this.state.img_data ?
-              <div className="camerabutton">
-                  <Stage width={1280} height={720} onClick={this.stageClick}></Stage>
-                  <img ref="photo" src={this.state.img_data} alt="" />
-                <span><Button onClick={this.retake}>Retake</Button></span>
-                <span><Button onClick={this.saveImage}>Save</Button></span>
-                  <span><Button onClick={this.selectSticker}><img id="emoji" src={emoji} alt="emoji"/></Button></span>
-                  <span><Button onClick={this.selectSticker}><img id="smileyface" src={smileyface} alt="smileyface"/></Button></span>
-              </div>
-              :
-          <div>
-            <Webcam
-                audio={false}
-                height={500}
-                ref={this.setRef}
-                screenshotFormat="image/jpeg"
-                width={1000}
-                videoConstraints={videoConstraints}
-            />
-            <div className="cam">
-              <Button onClick={this.capture}> </Button>
+        return (
+            <div>
+                <div className="home">
+                    <Link to={{
+                        pathname: '/'
+                    }}>
+                        <Button><img src={home} alt="Home" /></Button>
+                    </Link>
+                </div>
+                <div className="controlbutton">
+                    <div className="top">
+                        <h1>Send a Cheer</h1>
+                    </div>
+                    <br/>
+                    {this.state.img_data ?
+                        <div>
+                            <div className="outer"><Button onClick={this.retake}><h4>x</h4></Button></div>
+                            <EditCheer img_data={this.state.img_data} img_id={this.state.img_id}/>
+                        </div>
+                        :
+                        <div>
+                            <Webcam
+                                audio={false}
+                                height={495}
+                                ref={this.setRef}
+                                screenshotFormat="image/jpeg"
+                                width={880}
+                                videoConstraints={videoConstraints}
+                            />
+                            <div className="cam">
+                                <Button onClick={this.countDown}>{this.state.seconds}</Button>
+                            </div>
+                            <Link to={{pathname: '/SendCheer'}}>
+                                <br/>
+                                <Button>Back</Button>
+                            </Link>
+                        </div>
+                    }
+                </div>
             </div>
-          </div>}
-
-          <Link to={{
-            pathname: '/SendCheer'
-          }}>
-            <br/>
-            <Button>Back</Button>
-          </Link>
-        </div>
-      </div>
         );
-  }
+    }
 }
 
 export default Camera;

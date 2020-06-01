@@ -12,7 +12,7 @@ import { Multiselect } from 'multiselect-react-dropdown';
 import ToggleButton from "react-bootstrap/ToggleButton";
 import ToggleButtonGroup from "react-bootstrap/ToggleButtonGroup";
 
-class CameraTwo2 extends Component {
+class EditCheer extends Component {
     constructor(props){
         super(props);
         this.canvas = React.createRef();
@@ -203,4 +203,4 @@ class CameraTwo2 extends Component {
         );
     }
 }
-export default CameraTwo2;
+export default EditCheer;
