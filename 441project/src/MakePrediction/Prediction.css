@@ -26,7 +26,7 @@ input {
     border-radius: 5px;
     width: 300px;
 }
-h2, h3, p {
+h1, h4, h2, h3, p {
     font-family: 'Century Gothic','Futura','Didact Gothic',san-serif;;
 }
 .predInfo {
