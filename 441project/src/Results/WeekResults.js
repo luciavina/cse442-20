@@ -35,7 +35,7 @@ export default class WeekResults extends Component {
           </div>
           <div className="controlbutton">
           <div className="top">
-            <h1>RESULTS</h1>
+            <h1>VIEW RESULTS</h1>
           </div>
           <br/>
           {url === "http://localhost:3000/Results/WeekOneResults"

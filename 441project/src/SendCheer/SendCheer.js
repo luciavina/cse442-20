@@ -5,7 +5,12 @@ import "../MakePrediction/Prediction.css";
 import home from "../Home.PNG";
 
 class SendCheer extends Component {
-  render() {
+    
+    componentDidMount() {
+        alert("Note for demo: (1) allow browser access to webcam and (2) some cameras don't work when zoom video is enabled.");
+    }
+
+    render() {
     return (
         <div>
           <div className="home">
@@ -16,7 +21,7 @@ class SendCheer extends Component {
             </Link>
           </div>
           <div className="top">
-            <h1>Send a Cheer</h1>
+            <h1>SEND A CHEER</h1>
           </div>
           <div className="cheerInfo">
           <div>

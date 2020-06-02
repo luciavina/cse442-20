@@ -26,7 +26,7 @@ input {
     border-radius: 5px;
     width: 300px;
 }
-h2, h3, p {
+h1, h4, h2, h3, p {
     font-family: 'Century Gothic','Futura','Didact Gothic',san-serif;;
 }
 .predInfo {
@@ -150,13 +150,13 @@ h2, h3, p {
 }
 .slide {
     width: 640px;
-    border: solid 3px #4F4199;
+    border: solid 3px #B0A8DC;
 }
 .displayCheer img {
     width: 210px;
 }
 .displayCheer {
-    background-color: #4F4199;
+    background-color: #B0A8DC;
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
