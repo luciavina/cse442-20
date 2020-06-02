@@ -16,7 +16,7 @@ export default class Slideshow extends Component {
   }
 
   componentDidMount() {
-    this.timeout = setTimeout(this.changeImage, 1000);
+    this.timeout = setTimeout(this.changeImage, 2000);
   }
 
   componentWillUnmount() {
@@ -31,7 +31,7 @@ export default class Slideshow extends Component {
     }, function () {
       this.timeout = setTimeout(
           this.changeImage,
-          1000
+          2000
       )
     })
   }
@@ -44,7 +44,7 @@ export default class Slideshow extends Component {
 
     return (
         <div>
-          <img src= {shuffle(collection)[this.state.imageIndex]} height='360' width='640'/>
+          <img src= {shuffle(collection)[this.state.imageIndex]}/>
         </div>
     );
   }

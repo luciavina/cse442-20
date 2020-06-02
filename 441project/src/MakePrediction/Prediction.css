@@ -150,18 +150,19 @@ h1, h4, h2, h3, p {
 }
 .slide {
     width: 640px;
-    border: solid 3px #B0A8DC;
 }
 .displayCheer img {
-    width: 210px;
+    width: 640px;
+    border-bottom: solid 10px #B0A8DC;
 }
 .displayCheer {
     background-color: #B0A8DC;
     width: fit-content;
     margin-left: auto;
     margin-right: auto;
-    padding: 10px;
-    height: 1335px;
+    padding: 30px;
+    height: 1585px;
+    height: 1585px;
 }
 .displayCheer p {
     color: white;
@@ -173,4 +174,7 @@ h1, h4, h2, h3, p {
     border: 2px solid lightgray;
     border-radius: 5px;
     width: 300px;
+}
+.cheerImg img {
+    width: 510px;
 }
