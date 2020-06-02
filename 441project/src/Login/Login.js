@@ -10,6 +10,10 @@ class Login extends Component {
     super(props);
     this.state = {netId: ''};
   }
+  
+  componentDidMount() {
+    alert("For purposes of this demo: those without a UW NetID, or those who wish not to use their UW NetID, use frankieo.");
+  }
 
   handleChange = event => {
     this.setState({netId: event.target.value});
