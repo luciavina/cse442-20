@@ -22,7 +22,8 @@
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.4.1",
     "react-select-plus": "^1.0.0-rc.3.patch12",
-    "react-webcam": "^5.0.1"
+    "react-webcam": "^5.0.1",
+    "shuffle-array": "^1.0.1"
   },
   "scripts": {
     "start": "react-scripts start",
