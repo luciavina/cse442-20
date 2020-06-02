@@ -21,7 +21,7 @@ class SendCheer extends Component {
             </Link>
           </div>
           <div className="top">
-            <h1>Send a Cheer</h1>
+            <h1>SEND A CHEER</h1>
           </div>
           <div className="cheerInfo">
           <div>

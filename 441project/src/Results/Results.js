@@ -27,7 +27,7 @@ export default class Results extends Component {
             </Link>
           </div>
           <div className="top">
-            <h1>View Results</h1>
+            <h1>VIEW RESULTS</h1>
           </div>
           <br/>
           <h3>Weekly Results</h3>

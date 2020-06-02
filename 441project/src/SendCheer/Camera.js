@@ -68,7 +68,7 @@ class Camera extends Component {
                 </div>
                 <div className="controlbutton">
                     <div className="top">
-                        <h1>Send a Cheer</h1>
+                        <h1>SEND A CHEER</h1>
                     </div>
                     <br/>
                     {this.state.img_data ?
