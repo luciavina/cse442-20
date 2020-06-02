@@ -35,6 +35,7 @@ export default class ExteriorDisplay extends Component {
     return (
         <div className="displayCheer">
           <img src={logo} alt="logo"/>
+          <p><b>FAN CHEERS</b></p>
           <div className="slide">
             <Slideshow imageUrls={this.state.imageUrls}/>
           </div>
