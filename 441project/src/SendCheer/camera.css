@@ -73,7 +73,9 @@
     width: 600px;
     text-align: right;
     background-color: purple;
-    margin-left: auto;
-    margin-right: auto;
+    margin: auto;
+}
+.outer h4 {
+    padding: 3.5px;
 }
 
