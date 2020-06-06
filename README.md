@@ -5,5 +5,8 @@ DawgPack Showdown is a 10-week fitness competition between UW sports teams with 
 https://dawgpackshowdown.netlify.app/
 
 # To run:
+in the project directory run the following commands:
+
 npm install
+
 npm start
