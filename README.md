@@ -17,6 +17,8 @@ npm start
 
 cse441-20/441project/src/ directory containing the primary application code and routes.js file
 
+cse441-20/441project/src/ExternalDisplay directory containing files for the external display slideshow
+
 cse441-20/441project/src/Home directory containing files pertaining to the homepage
 
 cse441-20/441project/src/Login directory containing files for the Send A Cheer login
