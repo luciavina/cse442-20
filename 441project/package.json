@@ -7,7 +7,7 @@
     "@testing-library/react": "^9.5.0",
     "@testing-library/user-event": "^7.2.1",
     "bootstrap": "^4.5.0",
-    "firebase": "^7.14.5",
+    "firebase": "^10.9.0",
     "konva": "^6.0.0",
     "multiselect-react-dropdown": "^1.5.0",
     "prop-types": "^15.7.2",
